@@ -89,7 +89,6 @@ nav ul li a:hover {
     z-index: 0;
     top: 65px;
     opacity: 50%;
-    
 }
 
 /* Hero Text */
@@ -138,12 +137,13 @@ nav ul li a:hover {
 }
 
 /* Services Section */
-.text-serv{
+.text-serv {
     color: #15A48E;
     font-weight: bolder;
     font-size: 15px;
 }
-.text-offer{
+
+.text-offer {
     color: #023029;
     font-weight: bolder;
     font-size: 50px;
@@ -198,6 +198,49 @@ nav ul li a:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Mission & Vision Section */
+.mission-vision {
+    padding: 60px 5%;
+    text-align: center;
+    background: #ffffff;
+}
+
+.mission, .vision {
+    margin-bottom: 40px;
+}
+
+.mission h3, .vision h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #15A48E;
+}
+
+.mission h3 span, .vision h3 span {
+    color: #238273;
+}
+
+.mission p, .vision p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+.mission-images, .vision-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.mission-images img, .vision-images img {
+    width: 45%;
+    height: 250px;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* Fade-in Animation */
 @keyframes fadeIn {
     from {
@@ -228,5 +271,14 @@ nav ul li a:hover {
     .service-box {
         width: 80%;
         margin-bottom: 20px;
+    }
+
+    .mission-images, .vision-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mission-images img, .vision-images img {
+        width: 50%;
     }
 }
