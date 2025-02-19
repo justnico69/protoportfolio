@@ -88,12 +88,7 @@ nav ul li a:hover {
     background: rgba(30, 49, 48, 0.5);
     z-index: 0;
     top: 65px;
-<<<<<<< HEAD
-    opacity: 70%;
-    
-=======
     opacity: 50%;
->>>>>>> master
 }
 
 /* Hero Text */
@@ -153,28 +148,13 @@ nav ul li a:hover {
 }
 
 /* Services Section */
-<<<<<<< HEAD
-.services {
-    padding: 60px 5%;
-    text-align: center;
-    margin-top: 10%;
-    margin-bottom: 10%;
-}
-
-.text-serv{
-=======
 .text-serv {
->>>>>>> master
     color: #15A48E;
     font-weight: bolder;
     font-size: 20px;
 }
 
-<<<<<<< HEAD
-.text-offer{
-=======
 .text-offer {
->>>>>>> master
     color: #023029;
     font-weight: bolder;
     font-size: 50px;
@@ -253,15 +233,6 @@ nav ul li a:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-<<<<<<< HEAD
-.text-services{
-    font-size: 70px;
-    line-height: 1.2;
-    margin-top: 10px; 
-    color: #023029;
-}
-
-=======
 /* Mission & Vision Section */
 .mission-vision {
     padding: 60px 5%;
@@ -304,7 +275,6 @@ nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
->>>>>>> master
 
 /* Fade-in Animation */
 @keyframes fadeIn {
