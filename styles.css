@@ -82,12 +82,6 @@ nav ul li a:hover {
 
 .overlay {
     background: rgba(30, 49, 48, 0.5);
-<<<<<<< Updated upstream
-    z-index: 0;
-    top: 65px;
-    opacity: 50%;
-=======
->>>>>>> Stashed changes
 }
 
 .hero-text {
@@ -237,8 +231,6 @@ nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-<<<<<<< Updated upstream
-=======
 
 /* About Us Section */
 .about-us {
@@ -333,7 +325,6 @@ nav ul li a:hover {
     color: #0056b3;
 }
 
->>>>>>> Stashed changes
 
 /* Fade-in Animation */
 @keyframes fadeIn {
