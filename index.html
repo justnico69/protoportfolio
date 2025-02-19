@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/YOUR-FONT-AWESOME-KIT.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -40,7 +41,7 @@
         </div>
     </section>
 
-    <section class="services">
+    <section id="services" class="services">  <!-- Added ID here -->
         <div class="services-content">
             <div class="text-container">
                 <h3 class="text-serv">OUR SERVICES</h3>
@@ -50,46 +51,41 @@
                 <div class="service-box">
                     <i class="fas fa-user-cog fa-3x"></i>
                     <h3 class="text-services">General VA</h3>
-                    <p>Lorem ipsum dolor sit amet. Et dolorem vitae sit commodi nesciunt rem dolore quae id iusto 
-                        laudantium sed deserunt deleniti. Et quibusdam officiis et quae porro ea aperiam facilis! </p>
+                    <p>Lorem ipsum dolor sit amet...</p>
                 </div>
                 <div class="service-box">
                     <i class="fas fa-briefcase fa-3x"></i>
                     <h3 class="text-services">Executive VA</h3>
-                    <p>Lorem ipsum dolor sit amet. Et dolorem vitae sit commodi nesciunt rem dolore quae id iusto 
-                        laudantium sed deserunt deleniti. Et quibusdam officiis et quae porro ea aperiam facilis!</p>
+                    <p>Lorem ipsum dolor sit amet...</p>
                 </div>
                 <div class="service-box">
                     <i class="fas fa-home fa-3x"></i>
                     <h3 class="text-services">Real Estate VA</h3>
-                    <p>Lorem ipsum dolor sit amet. Et dolorem vitae sit commodi nesciunt rem dolore quae id iusto 
-                        laudantium sed deserunt deleniti. Et quibusdam officiis et quae porro ea aperiam facilis!</p>
+                    <p>Lorem ipsum dolor sit amet...</p>
                 </div>
                 <div class="service-box">
                     <i class="fas fa-user-md fa-3x"></i>
                     <h3 class="text-services">Medical VA</h3>
-                    <p>Lorem ipsum dolor sit amet. Et dolorem vitae sit commodi nesciunt rem dolore quae id iusto 
-                        laudantium sed deserunt deleniti. Et quibusdam officiis et quae porro ea aperiam facilis!</p>
+                    <p>Lorem ipsum dolor sit amet...</p>
                 </div>
             </div>
-            
         </div>
     </section>
-    <section id="mission-vision" class="mission-vision">
-        <div class="mission">
+
+    <section class="mission-vision">
+        <div id="mission" class="mission">  <!-- Added ID here -->
             <h3>Our <span>Mission</span></h3>
-            <p>Our mission is to empower businesses and entrepreneurs by providing high-quality, reliable, 
-                and cost effective virtual assistance. We are dedicated to streamlining operations, improving productivity, and
+            <p>Our mission is to empower businesses and entrepreneurs by providing high-quality, reliable, and cost effective virtual assistance. We are dedicated to streamlining operations, improving productivity, and
                 offering specialized support tailored to meet the unique needs of each client. Through innovation, trust, and
                 excellence, we help our clients succeed by managing their administrative and operational tasks, allowing
-                them to focus on growth and success.</p>
+                them to focus on growth and success</p>
             <div class="mission-images">
                 <img src="assets/m1.png" alt="Mission Image 1">
                 <img src="assets/m2.png" alt="Mission Image 2">
             </div>
         </div>
     
-        <div class="vision">
+        <div id="vision" class="vision">  <!-- Added ID here -->
             <h3>Our <span>Vision</span></h3>
             <p>Our vision is to become a leading provider of
                 innovative and personalized virtual assistance,
@@ -108,6 +104,56 @@
             </div>
         </div>
     </section>
+<<<<<<< Updated upstream
     
+=======
+
+    <section id="about" class="about-us">  <!-- Added ID here -->
+        <div class="about-content">
+            <div class="about-text">
+                <h3 class="about-title">ABOUT US</h3>
+                <p class="about-description">We are a team of dedicated professionals that will help you</p>
+            </div>
+            <div class="about-image">
+                <img src="assets/ab2.png" alt="Our Team">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">  <!-- Added ID here -->
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i> 1234 Street, City</p>
+            <p><i class="fas fa-phone-alt"></i> +63 900 123 4567</p>
+            <p><i class="fas fa-envelope"></i> acevhub.email@gmail.com</p>
+        </div>
+        <div class="social-links">
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const navLinks = document.querySelectorAll("nav ul li a");
+
+            navLinks.forEach(link => {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute("href").substring(1);
+                    const targetSection = document.getElementById(targetId);
+
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start"
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+>>>>>>> Stashed changes
 </body>
 </html>

@@ -67,58 +67,48 @@ nav ul li a:hover {
     justify-content: center;
     text-align: center;
     color: white;
-    padding-top: 60px;
+    padding-top: 80px;
 }
 
-/* Background Video */
-.bg-video {
+.bg-video, .overlay {
     position: absolute;
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
     object-fit: cover;
     z-index: -1;
-    top: 65px;
 }
 
-/* Dark Overlay */
 .overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
     background: rgba(30, 49, 48, 0.5);
+<<<<<<< Updated upstream
     z-index: 0;
     top: 65px;
     opacity: 50%;
+=======
+>>>>>>> Stashed changes
 }
 
-/* Hero Text */
 .hero-text {
-    text-align: center; 
-    margin-top: 50px;
-    z-index: 1;
     max-width: 1300px;
-    text-align: center;
     animation: fadeIn 1.5s ease-in-out;
 }
 
-.hero h1 {
-    font-size: 70px;
-    line-height: 1;
-    margin-bottom: 10px; 
-}
-.text {
+.hero h1, .text {
     font-size: 70px;
     line-height: 1.2;
-    margin-top: 10px; 
-    background: linear-gradient(to right, #cffff7,#15a48e, #f6c624,#f1bd11 );
+}
+
+.text {
+    background: linear-gradient(to right, #cffff7, #15a48e, #f6c624, #f1bd11);
     background-clip: text;
     color: transparent;
-
 }
+
 .hero p {
     font-size: 1.2rem;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
 /* CTA Buttons */
@@ -135,7 +125,7 @@ nav ul li a:hover {
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
 .btn.secondary {
@@ -152,36 +142,32 @@ nav ul li a:hover {
     color: #15A48E;
     font-weight: bolder;
     font-size: 20px;
+    text-align: center;
 }
 
 .text-offer {
     color: #023029;
     font-weight: bolder;
     font-size: 50px;
-    margin-bottom: 5%;
-}
-
-.services h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    margin: 20px 0 40px;
+    text-align: center;
 }
 
 .service-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
-    margin-top: 20px;
-    gap: 10px;
+    gap: 20px;
 }
 
 .service-box {
-    width: 24%;
+    width: 280px;
     padding: 20px;
     background: #e5faf6;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     transition: 0.3s;
-
+    text-align: center;
 }
 
 .service-box img {
@@ -198,34 +184,14 @@ nav ul li a:hover {
 .service-list li {
     font-size: 1rem;
     color: #555;
-    margin-bottom: 8px;
     display: flex;
     align-items: center;
     gap: 10px;
-
 }
 
 .service-list li i {
-    color: #F6C624; 
-    margin-right: 10px;
+    color: #F6C624;
     font-size: 1.2rem;
-
-}
-.service-box i{
-    background: linear-gradient(to right,#15a48e,#067262 );
-    background-clip: text;
-    color: transparent;
-}
-.service-box h3 {
-    margin-top: 15px;
-    font-size: 1.5rem;
-}
-
-.service-box p {
-    font-size: 15px;
-    color: #555;
-    margin-top: 20px;
-    text-align: justify;
 }
 
 .service-box:hover {
@@ -238,10 +204,6 @@ nav ul li a:hover {
     padding: 60px 5%;
     text-align: center;
     background: #ffffff;
-}
-
-.mission, .vision {
-    margin-bottom: 40px;
 }
 
 .mission h3, .vision h3 {
@@ -275,6 +237,103 @@ nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+<<<<<<< Updated upstream
+=======
+
+/* About Us Section */
+.about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 5%;
+    background-color: #f8f9fa;
+}
+
+.about-content {
+    display: flex;
+    max-width: 1200px;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #004d40;
+    text-transform: uppercase;
+}
+
+.about-description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* Contact Section */
+.contact {
+    background: white;
+    padding: 40px 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;  /* Full width */
+    text-align: center;
+    border-radius: 0;  /* Remove rounded corners */
+}
+
+.contact h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-info p {
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.contact-info i {
+    color: #007bff;
+    margin-right: 10px;
+}
+
+/* Social Media Icons */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-icon {
+    font-size: 24px;
+    color: #007bff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #0056b3;
+}
+
+>>>>>>> Stashed changes
 
 /* Fade-in Animation */
 @keyframes fadeIn {
@@ -293,27 +352,27 @@ nav ul li a:hover {
     nav ul {
         display: none;
     }
-
-    .hero h1 {
+    .hero h1, .text {
         font-size: 2rem;
     }
-
     .service-container {
         flex-direction: column;
         align-items: center;
     }
-
     .service-box {
-        width: 80%;
-        margin-bottom: 20px;
+        width: 90%;
     }
-
     .mission-images, .vision-images {
         flex-direction: column;
-        align-items: center;
     }
-
     .mission-images img, .vision-images img {
-        width: 50%;
+        width: 100%;
+    }
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-image img {
+        max-width: 100%;
     }
 }
