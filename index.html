@@ -4,21 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Company Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://kit.fontawesome.com/YOUR-FONT-AWESOME-KIT.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+   
+   
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">LOGO</div>
-            <ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="navMenu">
                 <li><a href="#services">Our Services</a></li>
-                <li><a href="#reviews">Reviews</a></li>
-                <li><a href="#vision">Our Vision</a></li>
                 <li><a href="#mission">Our Mission</a></li>
+                <li><a href="#vision">Our Vision</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#contact">Contact Us</a></li>
             </ul>
@@ -32,7 +37,7 @@
         <div class="overlay"></div>
         <div class="hero-text">
             <h1>Aspiring to be a Professional</h1>
-            <h1 class="text"> Virtual Assistant? </h1>
+            <h1 class="text">Virtual Assistant?</h1>
             <p>Join us and unlock limitless career opportunities!</p>
             <div class="cta-buttons">
                 <a href="#contact" class="btn">Contact Us</a>
@@ -41,7 +46,7 @@
         </div>
     </section>
 
-    <section id="services" class="services">  <!-- Added ID here -->
+    <section id="services" class="services">
         <div class="services-content">
             <div class="text-container">
                 <h3 class="text-serv">OUR SERVICES</h3>
@@ -73,7 +78,7 @@
     </section>
 
     <section class="mission-vision">
-        <div id="mission" class="mission">  <!-- Added ID here -->
+        <div id="mission" class="mission">
             <h3>Our <span>Mission</span></h3>
             <p>Our mission is to empower businesses and entrepreneurs by providing high-quality, reliable, and cost effective virtual assistance. We are dedicated to streamlining operations, improving productivity, and
                 offering specialized support tailored to meet the unique needs of each client. Through innovation, trust, and
@@ -85,7 +90,7 @@
             </div>
         </div>
     
-        <div id="vision" class="vision">  <!-- Added ID here -->
+        <div id="vision" class="vision">
             <h3>Our <span>Vision</span></h3>
             <p>Our vision is to become a leading provider of
                 innovative and personalized virtual assistance,
@@ -105,7 +110,7 @@
         </div>
     </section>
 
-    <section id="about" class="about-us">  <!-- Added ID here -->
+    <section id="about" class="about-us">
         <div class="about-content">
             <div class="about-text">
                 <h3 class="about-title">ABOUT US</h3>
@@ -117,23 +122,71 @@
         </div>
     </section>
 
-    <section id="contact" class="contact">  <!-- Added ID here -->
-        <h2>Contact Us</h2>
-        <div class="contact-info">
-            <p><i class="fas fa-map-marker-alt"></i> 1234 Street, City</p>
-            <p><i class="fas fa-phone-alt"></i> +63 900 123 4567</p>
-            <p><i class="fas fa-envelope"></i> acevhub.email@gmail.com</p>
-        </div>
-        <div class="social-links">
-            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+    <!-- Integrated Contact Section with New Design -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+            <p class="contact-subtitle">Get in touch with our team to discuss how we can help your business succeed.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Our Location</h3>
+                    <p>1234 Street, City</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Phone Number</h3>
+                    <p>+63 900 123 4567</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Address</h3>
+                    <p>acevhub.email@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="Your Message"></textarea>
+                    </div>
+                    <button class="submit-btn" type="submit">Send Message</button>
+                </form>
+            </div>
         </div>
     </section>
+    
+    <!-- Social Media Section -->
+    <div class="social-section">
+        <div class="social-container">
+            <h3 class="social-title">Connect With Us</h3>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Virtual Assistant Services. All Rights Reserved.</p>
+    </footer>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            // Smooth scrolling
             const navLinks = document.querySelectorAll("nav ul li a");
-
             navLinks.forEach(link => {
                 link.addEventListener("click", function(event) {
                     event.preventDefault();
@@ -148,8 +201,24 @@
                     }
                 });
             });
+            
+            // Mobile menu toggle
+            const menuToggle = document.getElementById("menuToggle");
+            const navMenu = document.getElementById("navMenu");
+            
+            menuToggle.addEventListener("click", function() {
+                navMenu.classList.toggle("active");
+            });
+            
+            // Close mobile menu when clicking a link
+            navLinks.forEach(link => {
+                link.addEventListener("click", function() {
+                    if (navMenu.classList.contains("active")) {
+                        navMenu.classList.remove("active");
+                    }
+                });
+            });
         });
     </script>
-
 </body>
 </html>
