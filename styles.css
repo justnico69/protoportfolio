@@ -117,6 +117,7 @@ nav ul li a:hover:after {
     left: 0;
     object-fit: cover;
     z-index: -1;
+    top: 65px;
 }
 
 .overlay {
@@ -188,8 +189,11 @@ nav ul li a:hover:after {
 
 /* Services Section - Optimized */
 .services {
-    background-color: #fff;
+    background-color: #ffffff;
+    padding-top: 8%;
+    padding-bottom: 8%;
 }
+
 
 .text-serv {
     color: #15A48E;
@@ -198,6 +202,7 @@ nav ul li a:hover:after {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
+    margin-bottom: -20px;
 }
 
 .text-offer {
@@ -228,7 +233,10 @@ nav ul li a:hover:after {
 }
 
 .service-box i {
-    color: #15A48E;
+    background: linear-gradient(to right, #15a48e, #0c695b, #0a3f37);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
     margin-bottom: 15px;
 }
 
@@ -241,6 +249,7 @@ nav ul li a:hover:after {
 .service-box p {
     color: #555;
     line-height: 1.6;
+    text-align: justify;
 }
 
 .service-box:hover {
@@ -249,57 +258,104 @@ nav ul li a:hover:after {
 }
 
 /* Mission & Vision Section - Optimized */
-.mission-vision {
-    padding: 80px 5%;
-    text-align: center;
-    background: #ffffff;
+.mission-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #E6FAF4;
+    padding: 60px 5%;
+    gap: 30px;
+}
+.vision-section {
+    padding: 80px 12%;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    text-align: justify;
+
 }
 
 .mission, .vision {
     max-width: 1200px;
-    margin: 0 auto 60px;
 }
 
-.mission h3, .vision h3 {
+/* Mission Section */
+.mission-section {
+    background: #E6FAF4; 
+}
+
+.vision-section {
+    background: #ffffff;
+}
+
+/* Headings */
+.mission h3{
     font-size: 2rem;
     font-weight: bold;
-    color: #15A48E;
+    background: linear-gradient(to right, #3fcca9, #2f4642, #05332b, #082924);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
     margin-bottom: 20px;
-    position: relative;
-    display: inline-block;
+    text-align: left;
 }
 
-.mission h3:after, .vision h3:after {
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 3px;
-    background: #F6C624;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
+.vision h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #3fcca9, #2f4642, #05332b, #082924);
+    background-clip: text;
+    -webkit-background-clip: text;
+    margin-bottom: 20px;
+    text-align: right;
 }
 
-.mission h3 span, .vision h3 span {
-    color: #238273;
-}
-
-.mission p, .vision p {
+/* Paragraphs */
+.mission p {
     font-size: 1.1rem;
     color: #555;
     max-width: 900px;
-    margin: 30px auto;
+    margin: 20px auto;
     line-height: 1.8;
+    text-align: left;
+    flex: 1;
+}
+.vision p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 900px;
+    margin: 20px auto;
+    line-height: 1.8;
+    text-align: right;
 }
 
-.mission-images, .vision-images {
+/* Image Container */
+.mission-images {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    margin-top: 30px;
+}
+.vision-images {
     display: flex;
     justify-content: center;
     gap: 30px;
     margin-top: 30px;
+
 }
 
-.mission-images img, .vision-images img {
+.mission-images img {
+    width: 100%;
+    height: 250px;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.vision-images img {
     width: 45%;
     height: 250px;
     max-width: 350px;
@@ -307,10 +363,23 @@ nav ul li a:hover:after {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     object-fit: cover;
     transition: 0.3s;
+
 }
 
 .mission-images img:hover, .vision-images img:hover {
     transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mission-images, .vision-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mission-images img, .vision-images img {
+        width: 80%;
+    }
 }
 
 /* About Us Section - Optimized */
