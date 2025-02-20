@@ -78,6 +78,7 @@ nav ul li a:hover {
     left: 0;
     object-fit: cover;
     z-index: -1;
+    top: 65px;
 }
 
 .overlay {
@@ -137,6 +138,7 @@ nav ul li a:hover {
     font-weight: bolder;
     font-size: 20px;
     text-align: center;
+    margin-bottom: -2%;
 }
 
 .text-offer {
@@ -146,12 +148,40 @@ nav ul li a:hover {
     margin: 20px 0 40px;
     text-align: center;
 }
+.services{
+    padding: 60px 5%;
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: 8%;
 
+}
 .service-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 50px;
+}
+
+.service-container i {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
+    background: linear-gradient(to right, #6ecebf,#2f7c71, #0f2b26);
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 10px;
+}
+
+.service-container h3 {
+    color: #023029;
+    font-weight: bolder;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 2%;
+}
+.service-container p{
+    text-align: justify;
 }
 
 .service-box {
