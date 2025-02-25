@@ -5,172 +5,180 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ace Virtual Hub offers professional virtual assistant services to help businesses streamline operations and enhance productivity. Contact us today!">
     <title>Ace Virtual Hub | Professional Virtual Assistant Services</title>
+    <!-- Preload critical resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-    
+    <!-- Defer non-critical script -->
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header class="header">
         <nav class="navbar">
-            <div class="navbar__logo">LOGO</div>
-            <div class="navbar__menu-toggle" id="menuToggle">
+            <a href="/" class="navbar__logo" aria-label="Ace Virtual Hub Home">Ace Virtual Hub</a>
+            <button class="navbar__menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
             <ul class="navbar__menu" id="navMenu">
                 <li class="navbar__item"><a href="#services" class="navbar__link">Our Services</a></li>
                 <li class="navbar__item"><a href="#mission" class="navbar__link">Our Mission</a></li>
                 <li class="navbar__item"><a href="#vision" class="navbar__link">Our Vision</a></li>
                 <li class="navbar__item"><a href="#about" class="navbar__link">About Us</a></li>
+                <li class="navbar__item"><a href="#testimonials" class="navbar__link">Testimonials</a></li>
                 <li class="navbar__item"><a href="#contact" class="navbar__link">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero-section">
-        <video autoplay muted loop class="hero-section__bg-video">
-            <source src="assets/ca2.mp4" type="video/mp4">
-        </video>
-        <div class="hero-section__overlay"></div>
-        <div class="hero-section__text">
-            <h1 class="hero-section__title">Aspiring to be a Professional</h1>
-            <h1 class="hero-section__subtitle">Virtual Assistant?</h1>
-            <p class="hero-section__description">Join us and unlock limitless career opportunities!</p>
-            <div class="hero-section__cta-buttons">
-                <a href="#contact" class="cta-button">Contact Us</a>
-                <a href="#services" class="cta-button cta-button--secondary">Our Services</a>
+    <main>
+        <section class="hero-section">
+            <video autoplay muted loop playsinline class="hero-section__bg-video">
+                <source src="assets/ca2.mp4" type="video/mp4">
+                <!-- Fallback for browsers that don't support video -->
+                <img src="assets/hero-fallback.jpg" alt="Virtual Assistant Services" class="hero-section__fallback-img">
+            </video>
+            <div class="hero-section__overlay"></div>
+            <div class="hero-section__text">
+                <h1 class="hero-section__title">Aspiring to be a Professional<span class="hero-section__subtitle"> Virtual Assistant?</span></h1>
+                <p class="hero-section__description">Join us and unlock limitless career opportunities!</p>
+                <div class="hero-section__cta-buttons">
+                    <a href="#contact" class="cta-button">Contact Us</a>
+                    <a href="#services" class="cta-button cta-button--secondary">Our Services</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="services" class="services-section">
-        <div class="services-section__content">
-            <div class="services-section__text-container">
-                <h3 class="services-section__header">OUR SERVICES</h3>
-                <p class="services-section__offer">We offer exceptional Services</p>
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="services-section__text-container">
+                    <h2 class="services-section__header">OUR SERVICES</h2>
+                    <p class="services-section__offer">We offer exceptional Services</p>
+                </div>
+                <div class="services-section__container">
+                    <article class="services-section__box">
+                        <i class="fas fa-user-cog" aria-hidden="true"></i>
+                        <h3 class="services-section__box-title">General VA</h3>
+                        <p class="services-section__box-description">Our general virtual assistants handle administrative tasks, email management, scheduling, and basic customer support to streamline your daily operations.</p>
+                    </article>
+                    <article class="services-section__box">
+                        <i class="fas fa-briefcase" aria-hidden="true"></i>
+                        <h3 class="services-section__box-title">Executive VA</h3>
+                        <p class="services-section__box-description">Executive VAs provide high-level support to business leaders, managing complex calendars, communications, travel arrangements, and special projects.</p>
+                    </article>
+                    <article class="services-section__box">
+                        <i class="fas fa-home" aria-hidden="true"></i>
+                        <h3 class="services-section__box-title">Real Estate VA</h3>
+                        <p class="services-section__box-description">Specialized in real estate operations, our VAs handle property listings, client communications, document preparation, and market research.</p>
+                    </article>
+                    <article class="services-section__box">
+                        <i class="fas fa-user-md" aria-hidden="true"></i>
+                        <h3 class="services-section__box-title">Medical VA</h3>
+                        <p class="services-section__box-description">Our medical virtual assistants manage patient scheduling, insurance verification, medical records, and billing to help healthcare practices run smoothly.</p>
+                    </article>
+                </div>
             </div>
-            <div class="services-section__container">
-                <div class="services-section__box">
-                    <i class="fas fa-user-cog fa-3x"></i>
-                    <h3 class="services-section__box-title">General VA</h3>
-                    <p class="services-section__box-description">Lorem ipsum dolor sit amet. Et libero quasi hic quas eveniet et sunt iure vel quia iste.</p>
-                </div>
-                <div class="services-section__box">
-                    <i class="fas fa-briefcase fa-3x"></i>
-                    <h3 class="services-section__box-title">Executive VA</h3>
-                    <p class="services-section__box-description">Lorem ipsum dolor sit amet. Et libero quasi hic quas eveniet et sunt iure vel quia iste.</p>
-                </div>
-                <div class="services-section__box">
-                    <i class="fas fa-home fa-3x"></i>
-                    <h3 class="services-section__box-title">Real Estate VA</h3>
-                    <p class="services-section__box-description">Lorem ipsum dolor sit amet. Et libero quasi hic quas eveniet et sunt iure vel quia iste.</p>
-                </div>
-                <div class="services-section__box">
-                    <i class="fas fa-user-md fa-3x"></i>
-                    <h3 class="services-section__box-title">Medical VA</h3>
-                    <p class="services-section__box-description">Lorem ipsum dolor sit amet. Et libero quasi hic quas eveniet et sunt iure vel quia iste.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="mission" class="mission-section">
-        <div class="mission-section__content">
-            <h3 class="mission-section__header">Our <span>Mission</span></h3>
-            <p class="mission-section__description">Our mission is to empower businesses and entrepreneurs by providing high-quality, reliable, and cost-effective virtual assistance. 
-                We are dedicated to streamlining operations, improving productivity, and offering specialized support tailored to meet the unique needs of each client. 
-                Through innovation, trust, and excellence, we help our clients succeed by managing their administrative and operational tasks, allowing them to 
-                focus on growth and success.</p>
-            <div class="mission-section__images">
-                <img src="assets/m2.png" alt="Mission Image 2" class="mission-section__image">
-            </div>
-        </div>
-    </section>
-    
-    <section id="vision" class="vision-section">
-        <div class="vision-section__content">
-            <h3 class="vision-section__header">Our <span>Vision</span></h3>
-            <p class="vision-section__description">Our vision is to become a leading provider of innovative and personalized virtual assistance, transforming the way businesses operate. 
-                We strive to be a trusted partner to entrepreneurs and organizations by delivering exceptional service that drives growth, efficiency, and success. 
-                We envision a future where our support helps clients scale effortlessly, improve work-life balance, and focus on their core strengths, 
-                all while fostering a culture of continuous improvement and excellence.</p>
-            <div class="vision-section__images">
-                <img src="assets/v1.png" alt="Vision Image 1" class="vision-section__image">
-                <img src="assets/v2.png" alt="Vision Image 2" class="vision-section__image">
-            </div>
-        </div>
-    </section>
-    
-    <section id="about" class="about-section">
-        <div class="about-section__content">
-            <div class="about-section__text">
-                <h3 class="about-section__title">ABOUT US</h3>
-                <p class="about-section__description">We are a team of dedicated professionals that will help you</p>
-            </div>
-            <div class="about-section__image">
-                <img src="assets/ab2.png" alt="Our Team" class="about-section__team-image">
-            </div>
-        </div>
-    </section>
-    
-    <section id="testimonials" class="testimonials-section">
-        <div class="testimonials-section__container">
-            <h2 class="testimonials-section__header">What Our Clients Say</h2>
-            <p class="testimonials-section__subtitle">See what our clients have to say about our virtual assistant services.</p>
-            
-            <div class="testimonials-section__cards">
-                <div class="testimonials-section__card">
-                    <img src="assets/client1.jpg" alt="Client 1" class="testimonials-section__card-image">
-                    <h3 class="testimonials-section__card-name">John Doe</h3>
-                    <p class="testimonials-section__card-quote">"This virtual assistant service has been a game-changer for my business! Highly recommended."</p>
-                </div>
-                <div class="testimonials-section__card">
-                    <img src="assets/client2.jpg" alt="Client 2" class="testimonials-section__card-image">
-                    <h3 class="testimonials-section__card-name">Jane Smith</h3>
-                    <p class="testimonials-section__card-quote">"Professional, reliable, and efficient. Their VAs have made my workflow seamless."</p>
-                </div>
-                <div class="testimonials-section__card">
-                    <img src="assets/client3.jpg" alt="Client 3" class="testimonials-section__card-image">
-                    <h3 class="testimonials-section__card-name">Michael Lee</h3>
-                    <p class="testimonials-section__card-quote">"Great support and assistance. I now have more time to focus on scaling my business."</p>
+        <section id="mission" class="mission-section">
+            <div class="mission-section__content">
+                <h2 class="mission-section__header">Our <span>Mission</span></h2>
+                <p class="mission-section__description">Our mission is to empower businesses and entrepreneurs by providing high-quality, reliable, and cost-effective virtual assistance. 
+                    We are dedicated to streamlining operations, improving productivity, and offering specialized support tailored to meet the unique needs of each client. 
+                    Through innovation, trust, and excellence, we help our clients succeed by managing their administrative and operational tasks, allowing them to 
+                    focus on growth and success.</p>
+                <div class="mission-section__images">
+                    <img src="assets/m2.png" alt="Team collaborating on virtual assistant tasks" class="mission-section__image" loading="lazy">
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        
+        <section id="vision" class="vision-section">
+            <div class="vision-section__content">
+                <h2 class="vision-section__header">Our <span>Vision</span></h2>
+                <p class="vision-section__description">Our vision is to become a leading provider of innovative and personalized virtual assistance, transforming the way businesses operate. 
+                    We strive to be a trusted partner to entrepreneurs and organizations by delivering exceptional service that drives growth, efficiency, and success. 
+                    We envision a future where our support helps clients scale effortlessly, improve work-life balance, and focus on their core strengths, 
+                    all while fostering a culture of continuous improvement and excellence.</p>
+                <div class="vision-section__images">
+                    <img src="assets/v1.png" alt="Future of virtual assistance" class="vision-section__image" loading="lazy">
+                    <img src="assets/v2.png" alt="Digital workplace transformation" class="vision-section__image" loading="lazy">
+                </div>
+            </div>
+        </section>
+        
+        <section id="about" class="about-section">
+            <div class="about-section__content">
+                <div class="about-section__text">
+                    <h2 class="about-section__title">ABOUT US</h2>
+                    <p class="about-section__description">We are a team of dedicated professionals committed to helping businesses thrive through expert virtual assistance. Our talented VAs bring diverse skills and expertise to support your unique business needs, allowing you to focus on what you do best while we handle the rest.</p>
+                </div>
+                <div class="about-section__image">
+                    <img src="assets/ab2.png" alt="Our Virtual Assistant Team" class="about-section__team-image" loading="lazy">
+                </div>
+            </div>
+        </section>
+        
+        <section id="testimonials" class="testimonials-section">
+            <div class="testimonials-section__container">
+                <h2 class="testimonials-section__header">What Our Clients Say</h2>
+                <p class="testimonials-section__subtitle">See what our clients have to say about our virtual assistant services.</p>
+                
+                <div class="testimonials-section__cards">
+                    <article class="testimonials-section__card">
+                        <img src="assets/client1.jpg" alt="John Doe" class="testimonials-section__card-image" loading="lazy">
+                        <h3 class="testimonials-section__card-name">John Doe</h3>
+                        <p class="testimonials-section__card-quote">"This virtual assistant service has been a game-changer for my business! Highly recommended."</p>
+                    </article>
+                    <article class="testimonials-section__card">
+                        <img src="assets/client2.jpg" alt="Jane Smith" class="testimonials-section__card-image" loading="lazy">
+                        <h3 class="testimonials-section__card-name">Jane Smith</h3>
+                        <p class="testimonials-section__card-quote">"Professional, reliable, and efficient. Their VAs have made my workflow seamless."</p>
+                    </article>
+                    <article class="testimonials-section__card">
+                        <img src="assets/client3.jpg" alt="Michael Lee" class="testimonials-section__card-image" loading="lazy">
+                        <h3 class="testimonials-section__card-name">Michael Lee</h3>
+                        <p class="testimonials-section__card-quote">"Great support and assistance. I now have more time to focus on scaling my business."</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
 
-   <div id="contact" class="social-section">
-     <div class="social-section__container">
-       <h3 class="social-section__title">Connect With Us</h3>
-       <div class="social-section__info">
-         <h4 class="social-section__info-title">Contact Information</h4>
-         <ul>
-           <li>
-             <i class="fas fa-phone-alt"></i>
-             <span>+63 900 123 4567</span>
-           </li>
-           <li>
-             <i class="fas fa-envelope"></i>
-             <span>acevhub.email@gmail.com</span>
-           </li>
-           <li>
-             <i class="fas fa-map-marker-alt"></i>
-             <span>1234 Street, City</span>
-           </li>
-         </ul>
-       </div>
-       <div class="social-section__links">
-         <a href="#" class="social-section__icon"><i class="fab fa-facebook-f"></i></a>
-         <a href="#" class="social-section__icon"><i class="fab fa-instagram"></i></a>
-         <a href="#" class="social-section__icon"><i class="fab fa-linkedin-in"></i></a>
-         <a href="#" class="social-section__icon"><i class="fab fa-twitter"></i></a>
-       </div>
-     </div>
-   </div>
+    <section id="contact" class="social-section">
+        <div class="social-section__container">
+            <h2 class="social-section__title">Connect With Us</h2>
+            <div class="social-section__info">
+                <h3 class="social-section__info-title">Contact Information</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                        <span>+63 900 123 4567</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <span>acevhub.email@gmail.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        <span>1234 Street, City</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="social-section__links">
+                <a href="#" class="social-section__icon" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="#" class="social-section__icon" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                <a href="#" class="social-section__icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                <a href="#" class="social-section__icon" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </section>
     
     <footer class="footer">
-        <p class="footer__text">&copy; 2025 Virtual Assistant</p>
+        <p class="footer__text">&copy; 2025 Ace Virtual Hub. All rights reserved.</p>
     </footer>
+</body>
+</html>
