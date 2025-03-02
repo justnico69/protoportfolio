@@ -1,26 +1,59 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const bgImage = document.querySelector(".hero-sectionbg-image");
 
-// Initialize EmailJS with your user ID
-emailjs.init("zcsvZn7yiKRHlnApP"); // Replace with your EmailJS user ID
+    if (!bgImage) return; // Exit if the element doesn't exist
 
-function sendMail(event) {
-    event.preventDefault(); // Prevent the default form submission
+    function updateParallax() {
+        let scrolled = window.scrollY;
+        bgImage.style.transform = `translateY(${scrolled * 0.3}px)`;
+    }
 
-    let params = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        subject: document.getElementById("subject").value,
-        message: document.getElementById("message").value,
-    };
+    window.addEventListener("scroll", function () {
+        requestAnimationFrame(updateParallax);
+    });
+});
 
-    emailjs.send("service_bz55rqg", "template_nxpcpwi", params)
-        .then(function(response) {
-            alert("Email Sent!");
-            console.log("SUCCESS!", response.status, response.text);
-        }, function(error) {
-            alert("Failed to send email. Please try again.");
-            console.log("FAILED...", error);
-        });
+document.addEventListener("DOMContentLoaded", function () {
+    const track = document.querySelector(".carousel-track");
+    const items = document.querySelectorAll(".carousel-item");
+    const prevBtn = document.querySelector(".prev-btn");
+    const nextBtn = document.querySelector(".next-btn");
+    const dots = document.querySelectorAll(".dot");
+
+let index = 0;
+
+function updateCarousel() {
+const offset = index * items[0].offsetWidth;
+track.style.transform = `translateX(-${offset}px)`;
+
+// Update active dot
+dots.forEach(dot => dot.classList.remove("active"));
+dots[index].classList.add("active");
 }
+
+// Next Button
+nextBtn.addEventListener("click", () => {
+    index = (index + 1) % items.length;
+    updateCarousel();
+});
+
+// Prev Button
+prevBtn.addEventListener("click", () => {
+    index = (index - 1 + items.length) % items.length;
+    updateCarousel();
+});
+
+// Dot Navigation
+dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+    index = i;
+    updateCarousel();
+    });
+});
+});
+
+
+
         document.addEventListener("DOMContentLoaded", function() {
             // Smooth scrolling
             const navLinks = document.querySelectorAll("nav ul li a");
@@ -38,6 +71,12 @@ function sendMail(event) {
                     }
                 });
             });
+            document.addEventListener("DOMContentLoaded", function() {
+                document.addEventListener("scroll", function() {
+                  let scrolled = window.scrollY;
+                  document.querySelector(".hero-sectionbg-image").style.transform = "translateY(" + scrolled * 0.3 + "px)";
+                });
+              });
             
             // Mobile menu toggle
             const menuToggle = document.getElementById("menuToggle");
@@ -56,7 +95,9 @@ function sendMail(event) {
                 });
             });
         });
-   
+
+
+        
     
     
         

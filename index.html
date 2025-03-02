@@ -28,7 +28,7 @@
                 <li class="navbar__item"><a href="#mission" class="navbar__link">Our Mission</a></li>
                 <li class="navbar__item"><a href="#vision" class="navbar__link">Our Vision</a></li>
                 <li class="navbar__item"><a href="#about" class="navbar__link">About Us</a></li>
-                <li class="navbar__item"><a href="#testimonials" class="navbar__link">Testimonials</a></li>
+                <li class="navbar__item"><a href="#testimonials" class="navbar__link">Reviews</a></li>
                 <li class="navbar__item"><a href="#contact" class="navbar__link">Contact Us</a></li>
             </ul>
         </nav>
@@ -36,21 +36,18 @@
 
     <main>
         <section class="hero-section">
-            <video autoplay muted loop playsinline class="hero-section__bg-video">
-                <source src="assets/ca2.mp4" type="video/mp4">
-                <!-- Fallback for browsers that don't support video -->
-                <img src="assets/hero-fallback.jpg" alt="Virtual Assistant Services" class="hero-section__fallback-img">
-            </video>
-            <div class="hero-section__overlay"></div>
-            <div class="hero-section__text">
-                <h1 class="hero-section__title">Aspiring to be a Professional<span class="hero-section__subtitle"> Virtual Assistant?</span></h1>
-                <p class="hero-section__description">Join us and unlock limitless career opportunities!</p>
-                <div class="hero-section__cta-buttons">
-                    <a href="#contact" class="cta-button">Contact Us</a>
-                    <a href="#services" class="cta-button cta-button--secondary">Our Services</a>
-                </div>
+            <div class="hero-sectionbg-image"></div>
+            <div class="hero-sectionoverlay"></div>
+            <div class="hero-sectiontext">
+              <h1 class="hero-sectiontitle">Aspiring to be a Professional<span class="hero-sectionsubtitle"> <br>Virtual Assistant?</span></h1>
+              <p class="hero-sectiondescription">Join us and unlock limitless career opportunities!</p>
+              <div class="hero-section__cta-buttons ">
+                <a href="#contact" class="cta-button">Contact Us</a>
+                <a href="#services" class="cta-button cta-button--secondary">Our Services</a>
+              </div>
             </div>
-        </section>
+          </section>
+
 
         <section id="services" class="services-section">
             <div class="container">
@@ -82,34 +79,46 @@
                 </div>
             </div>
         </section>
+        
+        <section class="parallax-section">
+            <div class="parallax-background"></div>
+        </section>
 
         <section id="mission" class="mission-section">
             <div class="mission-section__content">
-                <h2 class="mission-section__header">Our <span>Mission</span></h2>
-                <p class="mission-section__description">Our mission is to empower businesses and entrepreneurs by providing high-quality, reliable, and cost-effective virtual assistance. 
-                    We are dedicated to streamlining operations, improving productivity, and offering specialized support tailored to meet the unique needs of each client. 
-                    Through innovation, trust, and excellence, we help our clients succeed by managing their administrative and operational tasks, allowing them to 
-                    focus on growth and success.</p>
-                <div class="mission-section__images">
-                    <img src="assets/m2.png" alt="Team collaborating on virtual assistant tasks" class="mission-section__image" loading="lazy">
+                <div class="mission-section__text">
+                    <h2 class="mission-section__title">Our <span>Mission</span></h2>
+                    <p class="mission-section__description">Our mission is to empower businesses and entrepreneurs by providing high-quality, reliable, and cost-effective virtual assistance. 
+                        We are dedicated to streamlining operations, improving productivity, and offering specialized support tailored to meet the unique needs of each client. 
+                        Through innovation, trust, and excellence, we help our clients succeed by managing their administrative and operational tasks, allowing them to 
+                        focus on growth and success.</p>
+                </div>
+                <div class="mission-section__image">
+                    <img src="assets/mission.jpeg" alt="Team collaborating on virtual assistant tasks" class="mission-section__team-image" loading="lazy">
                 </div>
             </div>
         </section>
         
         <section id="vision" class="vision-section">
             <div class="vision-section__content">
-                <h2 class="vision-section__header">Our <span>Vision</span></h2>
-                <p class="vision-section__description">Our vision is to become a leading provider of innovative and personalized virtual assistance, transforming the way businesses operate. 
-                    We strive to be a trusted partner to entrepreneurs and organizations by delivering exceptional service that drives growth, efficiency, and success. 
-                    We envision a future where our support helps clients scale effortlessly, improve work-life balance, and focus on their core strengths, 
-                    all while fostering a culture of continuous improvement and excellence.</p>
-                <div class="vision-section__images">
-                    <img src="assets/v1.png" alt="Future of virtual assistance" class="vision-section__image" loading="lazy">
-                    <img src="assets/v2.png" alt="Digital workplace transformation" class="vision-section__image" loading="lazy">
+                <div class="vision-section__image">
+                    <img src="assets/vision.jpg" alt="Future of virtual assistance" class="vision-section__team-image" loading="lazy">
+                </div>
+                <div class="vision-section__text">
+                    <h2 class="vision-section__title">Our <span>Vision</span></h2>
+                    <p class="vision-section__description">Our vision is to become a leading provider of innovative and personalized virtual assistance, transforming the way businesses operate. 
+                        We strive to be a trusted partner to entrepreneurs and organizations by delivering exceptional service that drives growth, efficiency, and success. 
+                        We envision a future where our support helps clients scale effortlessly, improve work-life balance, and focus on their core strengths, 
+                        all while fostering a culture of continuous improvement and excellence.</p>
                 </div>
             </div>
         </section>
+
+        <section class="parallax-section">
+            <div class="parallax-background"></div>
+        </section>
         
+
         <section id="about" class="about-section">
             <div class="about-section__content">
                 <div class="about-section__text">
@@ -121,6 +130,30 @@
                 </div>
             </div>
         </section>
+
+        <section class="training-section">
+            <div class="carousel-container">
+                <button class="carousel-btn prev-btn">&#10094;</button> <!-- Left Button -->
+              
+                <div class="carousel-track">
+                  <div class="carousel-item">Content 1</div>
+                  <div class="carousel-item">Content 2</div>
+                  <div class="carousel-item">Content 3</div>
+                  <div class="carousel-item">Content 4</div>
+                </div>
+              
+              
+                <div class="carousel-dots">
+                  <span class="dot active"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+
+                <button class="carousel-btn next-btn">&#10095;</button> <!-- Right Button -->
+            </div>
+        </section>
+
         
         <section id="testimonials" class="testimonials-section">
             <div class="testimonials-section__container">
@@ -129,24 +162,26 @@
                 
                 <div class="testimonials-section__cards">
                     <article class="testimonials-section__card">
-                        <img src="assets/client1.jpg" alt="John Doe" class="testimonials-section__card-image" loading="lazy">
+                        <i class="fa-solid fa-user" alt="Jane Smith" aria-hidden="true"></i>
                         <h3 class="testimonials-section__card-name">John Doe</h3>
                         <p class="testimonials-section__card-quote">"This virtual assistant service has been a game-changer for my business! Highly recommended."</p>
                     </article>
                     <article class="testimonials-section__card">
-                        <img src="assets/client2.jpg" alt="Jane Smith" class="testimonials-section__card-image" loading="lazy">
+                        <i class="fa-solid fa-user" alt="Jane Smith" aria-hidden="true"></i>
                         <h3 class="testimonials-section__card-name">Jane Smith</h3>
                         <p class="testimonials-section__card-quote">"Professional, reliable, and efficient. Their VAs have made my workflow seamless."</p>
                     </article>
                     <article class="testimonials-section__card">
-                        <img src="assets/client3.jpg" alt="Michael Lee" class="testimonials-section__card-image" loading="lazy">
+                        <!-- Replaced image with FAFSA icon -->
+                        <i class="fa-solid fa-user" aria-hidden="true"></i>
                         <h3 class="testimonials-section__card-name">Michael Lee</h3>
-                        <p class="testimonials-section__card-quote">"Great support and assistance. I now have more time to focus on scaling my business."</p>
+                        <p class="testimonials-section__card-quote">"Great support and assistance with my FAFSA application. I now have more time to focus on my studies."</p>
                     </article>
                 </div>
             </div>
         </section>
     </main>
+    
 
     <section id="contact" class="social-section">
         <div class="social-section__container">
@@ -177,6 +212,9 @@
         </div>
     </section>
     
+
+
+
     <footer class="footer">
         <p class="footer__text">&copy; 2025 Ace Virtual Hub. All rights reserved.</p>
     </footer>
