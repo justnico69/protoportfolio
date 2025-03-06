@@ -805,7 +805,7 @@ section {
 .footer-bottom {
   text-align: center;
   padding: 15px;
-  background: var(--primary-dark);
+  background: -webkit-linear-gradient(#f9f295, #977138);
   color: var(--text-light);
   font-weight: normal;
   font-size: 14px;

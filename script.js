@@ -35,10 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
    * Smooth Scrolling for Nav Links
    ***********************************/
   const navLinks = document.querySelectorAll('nav ul li a');
-  navLinks.forEach(link => {
-    link.addEventListener('click', function (e) {
+navLinks.forEach(link => {
+  link.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    
+    // If the link is just a hash (e.g., "#services"), smooth scroll:
+    if (href.startsWith('#')) {
       e.preventDefault();
-      const targetId = this.getAttribute('href').substring(1);
+      const targetId = href.substring(1);
       const targetSection = document.getElementById(targetId);
       if (targetSection) {
         targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -47,8 +51,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (navMenu && navMenu.classList.contains('active')) {
         navMenu.classList.remove('active');
       }
-    });
+    } else {
+      // For full/other page links, don't prevent default—let it navigate
+      console.log('Navigating to:', href);
+    }
   });
+});
+
 
   /***********************************
    * Parallax Effect for Hero Background

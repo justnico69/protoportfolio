@@ -1,10 +1,8 @@
-/* --------------------------------------------------
-   Global Styles & Variables (Matches index.html)
------------------------------------------------------ */
+/* Import Poppins Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* CSS Variables for consistent theming */
 :root {
-  /* Colors and typography to match index.html */
   --primary-color: #a47712;
   --primary-dark: #161002;
   --primary-light: #fff4c4;
@@ -18,19 +16,36 @@
   --section-padding: 80px 5%;
 }
 
-/* --------------------------------------------------
-   Reset & General Styles
------------------------------------------------------ */
+/* Header & Logo Styles (unchanged) */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust spacing between images */
+}
+
+.navbar__logo-image {
+  height: 50px; /* Adjust as needed */
+  width: auto;
+}
+
+.navbar__logo-text {
+  height: 100px; /* Adjust as needed */
+  width: auto;
+}
+
+/* Reset & General Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
-  font-size: 15px;
+  font-size: 15px; 
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
 }
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #f8f9fa;
@@ -38,26 +53,41 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 }
+
 img {
   max-width: 100%;
   height: auto;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
 section {
   padding: var(--section-padding);
 }
+
 .container {
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
-/* --------------------------------------------------
-   Header & Navigation (Copied from index.html)
------------------------------------------------------ */
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Header & Navbar */
 .header {
   background-color: #161002;
   padding: 5px 0;
@@ -68,51 +98,43 @@ section {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: var(--transition);
 }
+
 .header.scrolled {
   padding: 10px 0;
   background-color: rgba(2, 48, 41, 0.98);
 }
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 90%;
   max-width: 1400px;
-  margin: 0 auto;
+  margin: auto;
 }
 
-/* Header Logo: Using same logo images as index.html */
 .navbar__logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--text-light);
   letter-spacing: 1px;
   transition: var(--transition);
 }
+
 .navbar__logo:hover {
   color: var(--secondary-color);
 }
-.navbar__logo-image {
-  height: 60px; /* Fixed height to ensure proper scaling */
-  width: auto;
-}
-.navbar__logo-text {
-  height: 60px; /* Adjust so text logo is legible */
-  width: auto;
-}
 
-/* Navigation Menu */
 .navbar__menu {
   list-style: none;
   display: flex;
   gap: 25px;
 }
+
 .navbar__item {
   position: relative;
 }
+
 .navbar__link {
   font-weight: 500;
   text-decoration: none;
@@ -122,9 +144,11 @@ section {
   padding: 5px 0;
   font-size: 0.95rem;
 }
+
 .navbar__link:hover {
   color: var(--secondary-color);
 }
+
 .navbar__link:after {
   content: '';
   position: absolute;
@@ -135,10 +159,12 @@ section {
   background-color: var(--secondary-color);
   transition: width 0.3s;
 }
+
 .navbar__link:hover:after,
 .navbar__link.active:after {
   width: 100%;
 }
+
 
 /* Mobile Menu Toggle */
 .navbar__menu-toggle {
@@ -164,32 +190,7 @@ section {
 .navbar__menu-toggle.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
-@media (max-width: 768px) {
-  .navbar__menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    height: 100vh;
-    width: 80%;
-    max-width: 300px;
-    background: rgba(2,48,41,0.98);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 0;
-    transition: 0.5s;
-    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-  }
-  .navbar__menu.active {
-    right: 0;
-  }
-  .navbar__item {
-    margin: 15px 0;
-  }
-  .navbar__link {
-    font-size: 1.1rem;
-  }
-}
+
 
 /* --------------------------------------------------
    Hero Section (Matches index.html)
@@ -631,7 +632,7 @@ section {
 .footer-bottom {
   text-align: center;
   padding: 20px;
-  background: #09241c;
+  background: -webkit-linear-gradient(#f9f295, #977138);
   color: var(--text-light);
   font-weight: normal;
   font-size: 1rem;
