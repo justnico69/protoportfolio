@@ -6,43 +6,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Learn more about Ace Virtual Hub – our story, our team, our mission, and our vision.">
   <title>Ace Virtual Hub | About Us</title>
-  
-  <!-- Fonts and Icons -->
+
+  <!-- Fonts and Icons (same as index.html) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  
-  <!-- About Us Styles -->
+
+  <!-- Updated About Us Styles (Header and Footer now match index.html) -->
   <link rel="stylesheet" href="aboutUs.css">
-  
+
   <!-- Common Script (if needed) -->
   <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- HEADER (Same as index.html) -->
+  <!-- HEADER SECTION -->
+  <!-- This header now exactly matches index.html, using the same logo images, black background, and gold gradient text for navigation -->
   <header class="header">
     <nav class="navbar">
-      <a href="/" class="navbar__logo" aria-label="">
-        <img src="logo1.png" alt="Ace Virtual Hub Logo" class="navbar__logo-image">
+      <!-- Logo area: uses both the main logo image and the text logo (from index.html) -->
+      <a href="/" class="navbar__logo" aria-label="Ace Virtual Hub Home">
+        <img src="assets/logo1.png" alt="Ace Virtual Hub Logo" class="navbar__logo-image">
+        <img src="assets/logotext.png" alt="Ace Virtual Hub Text Logo" class="navbar__logo-text">
       </a>
+      <!-- Mobile menu toggle -->
       <button class="navbar__menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <ul class="navbar__menu" id="navMenu">
-        <li class="navbar__item"><a href="index.html#services" class="navbar__link">Our Services</a></li>
-        <li class="navbar__item"><a href="index.html#mission" class="navbar__link">Our Mission</a></li>
-        <li class="navbar__item"><a href="index.html#vision" class="navbar__link">Our Vision</a></li>
-        <li class="navbar__item"><a href="aboutUs.html" class="navbar__link active">About Us</a></li>
-        <li class="navbar__item"><a href="index.html#testimonials" class="navbar__link">Reviews</a></li>
-        <li class="navbar__item"><a href="index.html#Contact" class="navbar__link">Contact Us</a></li>
-      </ul>
+      <!-- Navigation links; these match index.html -->
+      <li class="navbar__item"><a href="index.html#services" class="navbar__link">Our Services</a></li>
+<li class="navbar__item"><a href="index.html#mission" class="navbar__link">Our Mission</a></li>
+<li class="navbar__item"><a href="index.html#vision" class="navbar__link">Our Vision</a></li>
+<li class="navbar__item"><a href="aboutUs.html" class="navbar__link active">About Us</a></li>
+<li class="navbar__item"><a href="index.html#testimonials" class="navbar__link">Reviews</a></li>
+<li class="navbar__item"><a href="index.html#Contact" class="navbar__link">Contact Us</a></li>
     </nav>
   </header>
 
-  <!-- HERO SECTION -->
+  <!-- HERO SECTION (unchanged content, styled with same gradient as index.html) -->
   <section class="hero-section">
     <div class="hero-sectionbg-image" style="background: url('assets/aboutus-hero.jpg') no-repeat center center/cover;"></div>
     <div class="hero-sectionoverlay"></div>
@@ -52,7 +55,7 @@
     </div>
   </section>
 
-  <!-- OUR STORY SECTION -->
+  <!-- OUR STORY SECTION (Content preserved) -->
   <section class="about-section" id="our-story">
     <div class="about-section__content">
       <div class="about-section__text">
@@ -67,7 +70,7 @@
     </div>
   </section>
 
-  <!-- OUR TEAM SECTION -->
+  <!-- OUR TEAM SECTION (Content preserved) -->
   <section class="about-section" id="our-team">
     <div class="about-section__content">
       <div class="about-section__image">
@@ -82,7 +85,7 @@
     </div>
   </section>
 
-  <!-- MISSION SECTION -->
+  <!-- MISSION SECTION (Content preserved) -->
   <section id="mission" class="mission-section">
     <div class="mission-section__content">
       <div class="mission-section__text">
@@ -97,17 +100,15 @@
     </div>
   </section>
 
-  <!-- VISION SECTION -->
+  <!-- VISION SECTION (Content preserved) -->
   <section id="vision" class="vision-section">
     <div class="vision-section__content">
-      <!-- Text on the Left -->
       <div class="vision-section__text">
         <h2 class="vision-section__title">Our Vision</h2>
         <p class="vision-section__description">
           To be the world's leading virtual assistance hub, transforming business operations through professional and efficient remote support.
         </p>
       </div>
-      <!-- Image on the Right -->
       <div class="vision-section__image">
         <img src="assets/vision.jpg" alt="Our Vision" class="vision-section__team-image" loading="lazy">
       </div>
@@ -115,6 +116,7 @@
   </section>
 
   <!-- FOOTER SECTION -->
+  <!-- The footer now uses the same black-and-gold styling and gradient text as index.html -->
   <footer>
     <div id="Contact" class="footer-container">
       <div class="footer-brand">
@@ -149,6 +151,5 @@
     </div>
     <p class="footer-bottom">Ace Virtual Hub © 2024 - All Rights Reserved</p>
   </footer>
-
 </body>
 </html>
