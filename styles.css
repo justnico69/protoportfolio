@@ -192,6 +192,7 @@ section {
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
   width: 110%;
   height: 100%;
   background: url('assets/Coverpage.png') no-repeat center center/cover;
