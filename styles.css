@@ -3,10 +3,10 @@
 
 /* CSS Variables for consistent theming */
 :root {
-  --primary-color: #15A48E;
-  --primary-dark: #023029;
-  --primary-light: #E6FAF4;
-  --secondary-color: #FFD700;
+  --primary-color: #a47712;
+  --primary-dark: #161002;
+  --primary-light: #fff4c4;
+  --secondary-color: #f3e5a6;
   --text-dark: #333;
   --text-light: #fff;
   --text-gray: #666;
@@ -15,6 +15,23 @@
   --border-radius: 8px;
   --section-padding: 80px 5%;
 }
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust spacing between images */
+}
+
+.navbar__logo-image {
+  height: 50px; /* Adjust as needed */
+  width: auto;
+}
+
+.navbar__logo-text {
+  height: 100px; /* Adjust as needed */
+  width: auto;
+}
+
+
 
 /* Reset & General Styles */
 * {
@@ -56,6 +73,7 @@ section {
   padding: 0 15px;
 }
 
+
 /* Accessibility */
 .sr-only {
   position: absolute;
@@ -71,8 +89,8 @@ section {
 
 /* Header & Navbar */
 .header {
-  background-color: rgba(2, 48, 41, 0.95);
-  padding: 15px 0;
+  background-color: #161002;
+  padding: 5px 0;
   position: fixed;
   width: 100%;
   top: 0;
@@ -205,9 +223,10 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3); 
+  background: rgba(249, 186, 12, 0.07); /* Last value (0.3) sets opacity */
   z-index: -1;
 }
+
 
 .hero-sectiondescription {
   max-width: 1300px;
@@ -224,10 +243,11 @@ section {
   animation: fadeIn 1.5s ease-in-out;
   margin-bottom: 15px;
   font-weight: 700;
+  color:#161002;
 }
 
 .hero-sectionsubtitle {
-  background: linear-gradient(to right, #277467, #15a48e, #d2f029, #f1bd11);
+  background: linear-gradient(to right,  #AE8625, #faf17a, #D2AC47, #f1bd11);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -242,6 +262,7 @@ section {
   margin-right: auto;
   font-weight: 300;
   letter-spacing: 0.5px;
+  color:#382906 ;
 
 }
 
@@ -255,7 +276,7 @@ section {
 
 .cta-button {
   padding: 14px 32px;
-  background-color: var(--primary-light);
+  background-color: #f3e5a6;
   color: var(--primary-dark);
   text-decoration: none;
   font-weight: 600;
@@ -269,7 +290,7 @@ section {
 }
 
 .cta-button--secondary {
-  background-color: var(--primary-color);
+  background-color: #ba8d1e;
   color: var(--text-light);
 }
 
@@ -280,8 +301,8 @@ section {
 
 .cta-button--secondary:hover {
   background-color: transparent;
-  border-color: var(--primary-color);
-  color: var(--text-light);
+  border-color: #ba8d1e;
+  color: #161002;
 }
 
 /* Services Section */
@@ -370,7 +391,7 @@ section {
 
 .services-section__box i {
   font-size: 3rem;
-  background: linear-gradient(to right, #15a48e, #0c695b, #0a3f37);
+  background: linear-gradient(to right, #D2AC47, #faf17a, #AE8625);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -450,7 +471,7 @@ section {
   text-transform: uppercase;
   margin-bottom: 20px;
   position: relative;
-  background: -webkit-linear-gradient( #189e8a, #0a3f37);         
+  background: -webkit-linear-gradient( #f9f295,#E0AA3E, #B88A44);         
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -468,7 +489,7 @@ section {
   position: absolute;
   width: 50px;
   height: 3px;
-  background: #0c695b;
+  background: #453917;
   bottom: -10px;
   left: 0;
 
@@ -478,7 +499,7 @@ section {
   position: absolute;
   width: 50px;
   height: 3px;
-  background: #0c695b;
+  background: #453917;
   bottom: -10px;
   left: 0;
   
