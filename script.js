@@ -1,3 +1,78 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children); // Each is .carousel-slide
+    const prevButton = document.querySelector('.prev-btn');
+    const nextButton = document.querySelector('.next-btn');
+    const dotsNav = document.querySelector('.carousel-dots');
+    const dots = Array.from(dotsNav.children);
+  
+    // Get the width of a single slide
+    const slideWidth = slides[0].getBoundingClientRect().width;
+  
+    // Position slides side by side
+    slides.forEach((slide, index) => {
+      slide.style.left = (slideWidth * index) + 'px';
+    });
+  
+    function moveToSlide(track, currentSlide, targetSlide) {
+      track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+      currentSlide.classList.remove('current-slide');
+      targetSlide.classList.add('current-slide');
+    }
+  
+    function updateDots(currentDot, targetDot) {
+      currentDot.classList.remove('active');
+      targetDot.classList.add('active');
+    }
+  
+    // Next button
+    nextButton.addEventListener('click', () => {
+      const currentSlide = track.querySelector('.current-slide') || slides[0];
+      const currentDot = dotsNav.querySelector('.active') || dots[0];
+      let nextSlide = currentSlide.nextElementSibling;
+      let nextDot = currentDot.nextElementSibling;
+  
+      // If we're at the last slide, loop back to the first
+      if (!nextSlide) {
+        nextSlide = slides[0];
+        nextDot = dots[0];
+      }
+      moveToSlide(track, currentSlide, nextSlide);
+      updateDots(currentDot, nextDot);
+    });
+  
+    // Prev button
+    prevButton.addEventListener('click', () => {
+      const currentSlide = track.querySelector('.current-slide') || slides[0];
+      const currentDot = dotsNav.querySelector('.active') || dots[0];
+      let prevSlide = currentSlide.previousElementSibling;
+      let prevDot = currentDot.previousElementSibling;
+  
+      // If we're at the first slide, loop to the last
+      if (!prevSlide) {
+        prevSlide = slides[slides.length - 1];
+        prevDot = dots[dots.length - 1];
+      }
+      moveToSlide(track, currentSlide, prevSlide);
+      updateDots(currentDot, prevDot);
+    });
+  
+    // Dot navigation
+    dotsNav.addEventListener('click', (e) => {
+      const targetDot = e.target.closest('span');
+      if (!targetDot) return;
+  
+      const currentSlide = track.querySelector('.current-slide') || slides[0];
+      const currentDot = dotsNav.querySelector('.active') || dots[0];
+      const targetIndex = dots.findIndex(dot => dot === targetDot);
+      const targetSlide = slides[targetIndex];
+  
+      moveToSlide(track, currentSlide, targetSlide);
+      updateDots(currentDot, targetDot);
+    });
+  });
+  
+
 document.addEventListener("DOMContentLoaded", function () {
     const bgImage = document.querySelector(".hero-sectionbg-image");
 

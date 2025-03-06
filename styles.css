@@ -724,103 +724,95 @@ section {
   margin-top: 5px;
 }
 
+/* Container for the entire carousel section */
 .training-section {
-  text-align: center;
   padding: 60px 20px;
-  padding-left: 5%;
-  padding-right: 5%;
-  background-color: #ffffff;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff; /* or match your site’s background */
+  text-align: center;
 }
 
-.training-header {
-  font-size: 28px;
-  font-weight: bold;
-  color: #000;
-}
-
-.training-subtext {
-  font-size: 16px;
-  color: #007bff;
-  margin-bottom: 20px;
-}
-
-/* Carousel Container */
+/* Wrapper that holds the slides, arrows, and dots */
 .carousel-container {
   position: relative;
   width: 100%;
+  max-width: 1200px; /* Adjust if needed */
+  margin: 0 auto;
   overflow: hidden;
   padding: 20px 0;
 }
 
-/* Carousel Container */
-.carousel-container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  padding: 20px 0;
-}
-
-/* Scrollable Wrapper */
+/* The track that slides horizontally */
 .carousel-track {
   display: flex;
-  gap: 20px;
-  overflow-x: hidden;
+  gap: 20px;              /* Space between slides */
+  overflow-x: hidden;     /* Hide scrollbars */
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 }
 
-/* Individual Slides */
+/* Individual slides */
 .carousel-item {
-  flex: 0 0 100%;
-  min-height: 500px;
-  max-height: 300px;
-  background: #dff7f2; /* Light blue-green */
+  flex: 0 0 100%;         /* Each slide takes full width */
+  min-height: 300px;      /* Adjust height as needed */
+  background: #dff7f2;    /* Teal-like background to match your screenshot */
   border-radius: 10px;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  font-weight: bold;
   scroll-snap-align: center;
+  
+  /* Center content in the slide */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Text styles */
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  
+  /* Optional box shadow for a raised look */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* Navigation Buttons */
+/* Arrow buttons */
 .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
+  
+  /* Basic styling */
+  background: #6c757d;
+  color: #fff;
   border: none;
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 50%;
   font-size: 18px;
   z-index: 10;
+  opacity: 0.8;
+  transition: background 0.3s, opacity 0.3s;
 }
 
 .carousel-btn:hover {
-  background: rgba(0, 0, 0, 0.8);
+  background: #495057;
+  opacity: 1;
 }
 
+/* Position left/right arrows */
 .prev-btn {
   left: 10px;
 }
-
 .next-btn {
   right: 10px;
 }
 
-/* Dots for Navigation */
+/* Dot indicators */
 .carousel-dots {
   display: flex;
   justify-content: center;
   gap: 8px;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
+/* Individual dots */
 .dot {
   width: 10px;
   height: 10px;
@@ -830,9 +822,12 @@ section {
   transition: background 0.3s ease;
 }
 
-.dot.active {
+/* Active or hover state for dots */
+.dot.active,
+.dot:hover {
   background: #333;
 }
+
 
 
 /* Testimonials Section */
