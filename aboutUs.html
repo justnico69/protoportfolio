@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Meta Information and Preloads -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn more about Ace Virtual Hub – our journey, our team, and our commitment to excellence in virtual assistant services.">
+  <meta name="description" content="Learn more about Ace Virtual Hub – our story, our team, our mission, and our vision.">
   <title>Ace Virtual Hub | About Us</title>
-  <!-- Preload critical resources -->
+  
+  <!-- Fonts and Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Link to About Us CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- About Us Styles -->
   <link rel="stylesheet" href="aboutUs.css">
+  
+  <!-- Common Script (if needed) -->
   <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Header & Navigation -->
+  <!-- HEADER (Same as index.html) -->
   <header class="header">
     <nav class="navbar">
-      <a href="/" class="navbar__logo" aria-label="Ace Virtual Hub Home">Ace Virtual Hub</a>
+      <!-- Logo redirects to index.html -->
+      <a href="index.html" class="navbar__logo" aria-label="Ace Virtual Hub Home">Ace Virtual Hub</a>
       <button class="navbar__menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
         <span></span>
         <span></span>
@@ -34,146 +41,79 @@
     </nav>
   </header>
 
-  <main>
-    <!-- Hero Section with an About Us theme -->
-    <section class="hero-section">
-      <!-- You can change the background image to an About Us–oriented image -->
-      <div class="hero-sectionbg-image" style="background: url('assets/aboutus-hero.jpg') no-repeat center center/cover;"></div>
-      <div class="hero-sectionoverlay"></div>
-      <div class="hero-sectiontext">
-        <h1 class="hero-sectiontitle">About Ace Virtual Hub</h1>
-        <p class="hero-sectiondescription">Discover our story, values, and the team behind our success.</p>
-      </div>
-    </section>
-
-    <!-- About Us Content Section -->
-    <section class="about-section">
-      <div class="about-section__content">
-        <div class="about-section__text">
-          <h2 class="about-section__title">Who We Are</h2>
-          <p class="about-section__description">
-            At Ace Virtual Hub, we are dedicated to delivering professional virtual assistant services that empower businesses to focus on what they do best. Our team of experts works passionately to streamline your operations and drive success.
-          </p>
-          <h3>Our Story</h3>
-          <p class="about-section__description">
-            Founded on the principles of innovation, reliability, and excellence, we began as a small startup and have grown into a trusted partner for businesses worldwide. Our journey is defined by a commitment to quality and a passion for exceeding client expectations.
-          </p>
-          <h3>Our Team</h3>
-          <p class="about-section__description">
-            We pride ourselves on a diverse team of professionals from various industries who are united by the goal of delivering personalized, high-quality service.
-          </p>
-        </div>
-        <div class="about-section__image">
-          <img src="assets/team.jpg" alt="Our Team" class="about-section__team-image" loading="lazy">
-        </div>
-      </div>
-    </section>
-
-    <!-- Carousel Section -->
-<!-- Full-Width Services Carousel -->
-<section class="services-carousel">
-    <div class="carousel-container">
-      <!-- Prev Arrow -->
-      <button class="carousel-btn prev-btn" aria-label="Previous Slide">&#10094;</button>
-      
-      <!-- Slides Track -->
-      <div class="carousel-track">
-        <!-- Slide 1 -->
-        <div class="carousel-slide current-slide">
-          <img src="assets/general-va.jpg" alt="General VA" class="carousel-image">
-          <div class="carousel-text">
-            <h2 class="carousel-title">General VA</h2>
-            <p class="carousel-description">
-              Our general virtual assistants handle administrative tasks, email management,
-              scheduling, and more—so you can focus on growing your business.
-            </p>
-          </div>
-        </div>
-  
-        <!-- Slide 2 -->
-        <div class="carousel-slide">
-          <img src="assets/executive-va.jpg" alt="Executive VA" class="carousel-image">
-          <div class="carousel-text">
-            <h2 class="carousel-title">Executive VA</h2>
-            <p class="carousel-description">
-              Executive VAs provide high-level support, managing complex calendars, 
-              travel arrangements, and communications for busy professionals.
-            </p>
-          </div>
-        </div>
-  
-        <!-- Slide 3 -->
-        <div class="carousel-slide">
-          <img src="assets/realestate-va.jpg" alt="Real Estate VA" class="carousel-image">
-          <div class="carousel-text">
-            <h2 class="carousel-title">Real Estate VA</h2>
-            <p class="carousel-description">
-              Our specialized Real Estate VAs handle property listings, client communications,
-              and market research to streamline your operations.
-            </p>
-          </div>
-        </div>
-  
-        <!-- Slide 4 -->
-        <div class="carousel-slide">
-          <img src="assets/medical-va.jpg" alt="Medical VA" class="carousel-image">
-          <div class="carousel-text">
-            <h2 class="carousel-title">Medical VA</h2>
-            <p class="carousel-description">
-              Medical VAs assist with patient scheduling, insurance verification, and billing,
-              helping healthcare practices run more smoothly.
-            </p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Next Arrow -->
-      <button class="carousel-btn next-btn" aria-label="Next Slide">&#10095;</button>
-    </div>
-  
-    <!-- Pagination Dots -->
-    <div class="carousel-dots">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="hero-sectionbg-image" style="background: url('assets/aboutus-hero.jpg') no-repeat center center/cover;"></div>
+    <div class="hero-sectionoverlay"></div>
+    <div class="hero-sectiontext">
+      <h1 class="hero-sectiontitle">About Ace Virtual Hub</h1>
+      <p class="hero-sectiondescription">Empowering Businesses, Elevating Careers</p>
     </div>
   </section>
-  
-  
 
-    <!-- Mission Section -->
-    <section id="mission" class="mission-section">
-      <div class="mission-section__content">
-        <div class="mission-section__text">
-          <h2 class="mission-section__title">Our Mission</h2>
-          <p class="mission-section__description">
-            To empower businesses with reliable and innovative virtual support that drives growth and efficiency.
-          </p>
-        </div>
-        <div class="mission-section__image">
-          <img src="assets/mission.jpeg" alt="Our Mission" class="mission-section__team-image" loading="lazy">
-        </div>
+  <!-- OUR STORY SECTION -->
+  <section class="about-section" id="our-story">
+    <div class="about-section__content">
+      <div class="about-section__text">
+        <h2 class="about-section__title">Our Story</h2>
+        <p class="about-section__description">
+          Ace Virtual Hub was founded on the principles of innovation, reliability, and excellence. We began as a small team dedicated to providing virtual assistance that enables businesses to focus on what they do best. Today, we’re proud to be a trusted partner for companies worldwide.
+        </p>
       </div>
-    </section>
-
-    <!-- Vision Section -->
-    <section id="vision" class="vision-section">
-      <div class="vision-section__content">
-        <div class="vision-section__image">
-          <img src="assets/vision.jpg" alt="Our Vision" class="vision-section__team-image" loading="lazy">
-        </div>
-        <div class="vision-section__text">
-          <h2 class="vision-section__title">Our Vision</h2>
-          <p class="vision-section__description">
-            To be the leading partner in virtual assistance, transforming business operations and enabling our clients to thrive.
-          </p>
-        </div>
+      <div class="about-section__image">
+        <img src="assets/our-story.jpg" alt="Our Story" class="about-section__team-image" loading="lazy">
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <!-- Footer (kept consistent with the original design) -->
+  <!-- OUR TEAM SECTION -->
+  <section class="about-section" id="our-team">
+    <div class="about-section__content">
+      <div class="about-section__image">
+        <img src="assets/team.jpg" alt="Our Team" class="about-section__team-image" loading="lazy">
+      </div>
+      <div class="about-section__text">
+        <h2 class="about-section__title">Our Team</h2>
+        <p class="about-section__description">
+          Our team consists of skilled professionals dedicated to providing seamless virtual support. From administrative experts to industry specialists, we work collaboratively to help businesses operate efficiently.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION SECTION -->
+  <section id="mission" class="mission-section">
+    <div class="mission-section__content">
+      <div class="mission-section__text">
+        <h2 class="mission-section__title">Our Mission</h2>
+        <p class="mission-section__description">
+          To empower businesses and entrepreneurs with high-quality, reliable virtual assistance that drives efficiency and success.
+        </p>
+      </div>
+      <div class="mission-section__image">
+        <img src="assets/mission.jpeg" alt="Our Mission" class="mission-section__team-image" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- VISION SECTION -->
+  <section id="vision" class="vision-section">
+    <div class="vision-section__content">
+      <!-- Text on the Left -->
+      <div class="vision-section__text">
+        <h2 class="vision-section__title">Our Vision</h2>
+        <p class="vision-section__description">
+          To be the world's leading virtual assistance hub, transforming business operations through professional and efficient remote support.
+        </p>
+      </div>
+      <!-- Image on the Right -->
+      <div class="vision-section__image">
+        <img src="assets/vision.jpg" alt="Our Vision" class="vision-section__team-image" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER SECTION -->
   <footer>
     <div id="Contact" class="footer-container">
       <div class="footer-brand">
@@ -191,7 +131,8 @@
         <ul>
           <li><a href="index.html#services">Services</a></li>
           <li><a href="aboutUs.html">About Us</a></li>
-          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#mission">Our Mission</a></li>
+          <li><a href="index.html#vision">Our Vision</a></li>
         </ul>
       </div>
       <div class="footer-newsletter">
@@ -202,11 +143,11 @@
           <a href="#"><i class="fab fa-twitter"></i></a>
           <a href="#"><i class="fab fa-linkedin"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
     </div>
     <p class="footer-bottom">Ace Virtual Hub © 2024 - All Rights Reserved</p>
   </footer>
+
 </body>
 </html>
