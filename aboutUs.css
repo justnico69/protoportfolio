@@ -90,7 +90,6 @@ section {
 /* Header & Navbar */
 .header {
   background-color: #161002;
-  padding: 5px 0;
   position: fixed;
   width: 100%;
   top: 0;
@@ -283,6 +282,70 @@ section {
   border-color: #ba8d1e;
   color: #161002;
 }
+/* --------------------------------------------------
+   Our Team Section
+----------------------------------------------------- */
+.ourteam {
+  max-width: 5000px;
+  margin: auto;
+  text-align: center;
+}
+.ourteam h2 {
+  background: -webkit-linear-gradient(#f9f295, #E0AA3E, #B88A44);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.ourteam p {
+  color: var(--primary-dark);
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.ourteamcontainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.ourteamcard {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  height: 400px;
+}
+.ourteamcard img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #e67e22;
+  object-fit: cover;
+}
+.ourteamcard h3 {
+  margin: 15px 0 5px;
+  font-size: 18px;
+}
+.ourteamcard p {
+  color: gray;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.ourteamcard .role {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.social-icons {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 0 8px;
+}
+
+
+
 
 /* --------------------------------------------------
    About Us (Our Story & Team) Section (Content preserved)
@@ -308,7 +371,9 @@ section {
 .about-section__title {
   font-size: 2.1rem;
   font-weight: 700;
-  color: var(--primary-dark);
+  background: -webkit-linear-gradient(#f9f295, #E0AA3E, #B88A44);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-transform: uppercase;
   margin-bottom: 20px;
   position: relative;
@@ -318,7 +383,7 @@ section {
   position: absolute;
   width: 60px;
   height: 3px;
-  background: var(--primary-color);
+  background: var(--primary-dark);
   bottom: -15px;
   left: 0;
 }
@@ -374,7 +439,7 @@ section {
   text-transform: uppercase;
   margin-bottom: 20px;
   position: relative;
-  background: -webkit-linear-gradient(#189e8a, #0a3f37);
+  background: -webkit-linear-gradient(#f9f295, #E0AA3E, #B88A44);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -390,7 +455,7 @@ section {
   position: absolute;
   width: 60px;
   height: 3px;
-  background: #0c695b;
+  background: var(--primary-dark);
   bottom: -15px;
   left: 0;
 }
@@ -520,7 +585,7 @@ section {
 }
 .testimonials-section__card i {
   font-size: 2.625rem;
-  background: linear-gradient(to right, #15a48e, #0c695b, #0a3f37);
+  background: linear-gradient(to right, #f9f295, #E0AA3E, #B88A44);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -555,32 +620,23 @@ section {
    Footer Section (Updated to match index.html design)
 ----------------------------------------------------- */
 .footer {
-  background: #161002; /* Matches header dark color */
-  padding: 30px 0;
+  background: var(--primary-dark);
+  padding: 20px 0;
   text-align: center;
   color: var(--text-light);
 }
-.footer__text {
-  margin: 0;
-  font-size: 1rem;
-}
+
 .footer-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #161002;
+  background: var(--primary-dark);
   color: var(--text-light);
-  padding: 30px;
+  padding: 20px;
   flex-wrap: wrap;
   font-family: 'Poppins', sans-serif;
 }
-.footer-brand,
-.footer-office,
-.footer-links {
-  flex: 1;
-  min-width: 220px;
-  margin: 10px;
-}
+
 /* Apply gradient text styling to footer headings */
 .footer-brand h2,
 .footer-office h3,
@@ -590,52 +646,73 @@ section {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .footer-brand p,
 .footer-office p {
   color: var(--text-light);
+  margin-bottom: 5%;
 }
+
+.footer-office h3{
+  margin-bottom: 5%;
+}
+
 .footer-links ul {
   list-style: none;
   padding: 0;
 }
+
+.footer-links h3 {
+  margin-bottom: 5%;
+}
+
+.footer-links li{
+  margin-bottom: 5%;
+}
+
 .footer-links ul li a {
   color: var(--text-light);
   text-decoration: none;
   transition: color 0.3s ease-in-out;
+
 }
+
 .footer-links ul li a:hover {
   color: var(--primary-color);
 }
-/* Social Icons */
+
 .social-icons {
   display: flex;
   justify-content: center;
   gap: 15px;
   margin-top: 10px;
 }
+
 .social-icons a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   color: var(--text-light);
-  font-size: 20px;
+  font-size: 18px;
   transition: background 0.3s ease-in-out, transform 0.2s;
 }
+
 .social-icons a:hover {
-  background: rgba(255,255,255,0.3);
+  background: rgba(255, 255, 255, 0.3);
   transform: scale(1.1);
 }
+
 .footer-bottom {
   text-align: center;
-  padding: 20px;
+  padding: 15px;
   background: -webkit-linear-gradient(#f9f295, #977138);
   color: var(--text-light);
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 14px;
 }
 
 /* --------------------------------------------------
