@@ -1,4 +1,30 @@
 
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+  
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', function() {
+      menuToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+      
+      // Toggle ARIA attributes for accessibility
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+      menuToggle.setAttribute('aria-expanded', !expanded);
+    });
+    
+    // Close menu when a nav link is clicked
+    const navLinks = document.querySelectorAll('.navbar__link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   // Grab all nav links by class or container
   const navLinks = document.querySelectorAll('.navbar__link');
