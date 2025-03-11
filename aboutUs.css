@@ -647,6 +647,10 @@ section {
   -webkit-text-fill-color: transparent;
 }
 
+.footer-newsletter {
+  margin-right: 2px;
+}
+
 .footer-brand p,
 .footer-office p {
   color: var(--text-light);
