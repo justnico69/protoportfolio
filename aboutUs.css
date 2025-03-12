@@ -608,14 +608,12 @@ section {
   }
 }
 
-
-
 /* --------------------------------------------------
-   Footer Section (Updated to match index.html design)
+   Footer Section 
 ----------------------------------------------------- */
 .footer {
   background: var(--primary-dark);
-  padding: 20px 0 60px;
+  padding: 20px 0;
   text-align: center;
   color: var(--text-light);
 }
@@ -623,12 +621,19 @@ section {
 .footer-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  background: var(--primary-dark);
+  align-items: flex-start;
+  background: #161002;
   color: var(--text-light);
-  padding: 20px;
+  padding: 30px 40px;
   flex-wrap: wrap;
   font-family: 'Poppins', sans-serif;
+}
+
+.footer-brand,
+.footer-office,
+.footer-links,
+.footer-newsletter {
+  padding: 0 15px;
 }
 
 /* Apply gradient text styling to footer headings */
@@ -639,20 +644,15 @@ section {
   background: -webkit-linear-gradient(#f9f295, #E0AA3E, #B88A44);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.footer-newsletter {
-  margin-right: 2px;
+  margin-bottom: 15px;
+  font-size: 18px;
 }
 
 .footer-brand p,
 .footer-office p {
   color: var(--text-light);
-  margin-bottom: 5%;
-}
-
-.footer-office h3{
-  margin-bottom: 5%;
+  margin-bottom: 8px;
+  font-size: 14px;
 }
 
 .footer-links ul {
@@ -660,19 +660,15 @@ section {
   padding: 0;
 }
 
-.footer-links h3 {
-  margin-bottom: 5%;
-}
-
-.footer-links li{
-  margin-bottom: 5%;
+.footer-links li {
+  margin-bottom: 8px;
 }
 
 .footer-links ul li a {
   color: var(--text-light);
   text-decoration: none;
   transition: color 0.3s ease-in-out;
-
+  font-size: 14px;
 }
 
 .footer-links ul li a:hover {
@@ -681,7 +677,7 @@ section {
 
 .social-icons {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 15px;
   margin-top: 10px;
 }
@@ -690,12 +686,12 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
   color: var(--text-light);
-  font-size: 18px;
+  font-size: 16px;
   transition: background 0.3s ease-in-out, transform 0.2s;
 }
 
@@ -706,8 +702,8 @@ section {
 
 .footer-bottom {
   text-align: center;
-  padding: 40px 15px 100px; /* Creates space while keeping the background */
-  background: var(--primary-dark); /* Ensures no white gap */
+  padding: 15px;
+  background: -webkit-linear-gradient(#f9f295, #977138);
   color: var(--text-light);
   font-weight: normal;
   font-size: 14px;
