@@ -287,37 +287,82 @@ section {
    Our Team Section
 ----------------------------------------------------- */
 .ourteam {
-  max-width: 5000px;
-  margin: auto;
+  position: relative;
   text-align: center;
 }
+
+.ourteam_header {
+  position: relative; 
+  display: inline-block; 
+  padding-bottom: 10px; 
+}
+
 .ourteam h2 {
   background: -webkit-linear-gradient(#f9f295, #E0AA3E, #B88A44);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 32px;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
+
+.ourteam_header::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background: var(--primary-color);
+  bottom: 0; 
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
 .ourteam p {
   color: var(--primary-dark);
   font-size: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .ourteamcontainer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 25px;
+
 }
 .ourteamcard {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  width: 320px;
+  padding: 20px 20px;
+  background: var(--primary-light);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
   text-align: center;
-  width: 300px;
-  height: 400px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 5%;
 }
+
+.ourteamcard:hover {
+  transform: translateY(-10px);
+}
+
+.outeramcard:hover::before {
+  transform: scaleX(1);
+}
+
+.outeramcard::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: var(--primary-color);
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transition: var(--transition);
+  transform-origin: left;
+}
+
 .ourteamcard img {
   width: 200px;
   height: 200px;
@@ -338,76 +383,7 @@ section {
   font-weight: bold;
   margin-bottom: 10px;
 }
-.social-icons {
-  color: black;
-  text-decoration: none;
-  font-size: 16px;
-  margin: 0 8px;
-}
 
-
-
-
-/* --------------------------------------------------
-   About Us (Our Story & Team) Section (Content preserved)
------------------------------------------------------ */
-.about-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 120px 5%;
-  background-color: #ffffff;
-  box-shadow: 0px -10px 20px rgba(0,0,0,0.1), 0px 10px 20px rgba(0,0,0,0.1);
-}
-.about-section__content {
-  display: flex;
-  max-width: 1200px;
-  align-items: center;
-  gap: 80px;
-  flex-wrap: wrap;
-}
-.about-section__text {
-  flex: 1;
-}
-.about-section__title {
-  font-size: 2.1rem;
-  font-weight: 700;
-  background: -webkit-linear-gradient(#f9f295, #E0AA3E, #B88A44);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  position: relative;
-}
-.about-section__title::after {
-  content: '';
-  position: absolute;
-  width: 60px;
-  height: 3px;
-  background: var(--primary-dark);
-  bottom: -15px;
-  left: 0;
-}
-.about-section__description {
-  font-size: 1.3rem;
-  color: var(--text-gray);
-  line-height: 1.8;
-  margin-top: 30px;
-}
-.about-section__image {
-  flex: 1;
-}
-.about-section__team-image {
-  width: 100%;
-  max-width: 500px;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  transition: var(--transition);
-}
-.about-section__team-image:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-}
 
 /* --------------------------------------------------
    Mission Section (Content preserved)

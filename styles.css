@@ -387,15 +387,6 @@ section {
   transform: scaleX(1);
 }
 
-.services-section__box i {
-  font-size: 3rem;
-  background: linear-gradient(to right,#AE8625,#D2AC47,#EDC967,#f7ef8a);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  margin-bottom: 20px;
-  display: inline-block;
-}
 
 .services-section__box-title {
   font-size: 1.3rem;
