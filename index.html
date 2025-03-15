@@ -29,6 +29,7 @@
         <span></span>
       </button>
       <ul class="navbar__menu" id="navMenu">
+        <li class="navbar__item"><a href="#home" class="navbar__link">Home</a></li>
         <li class="navbar__item"><a href="#services" class="navbar__link">Our Services</a></li>
         <li class="navbar__item"><a href="#mission" class="navbar__link">Our Mission</a></li>
         <li class="navbar__item"><a href="#vision" class="navbar__link">Our Vision</a></li>
@@ -54,7 +55,20 @@
           <a href="#services" class="cta-button cta-button--secondary">Our Services</a>
         </div>
       </div>
-    </section>
+    </section> 
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+    const bgImage = document.querySelector(".hero-sectionbg-image");
+
+    if (bgImage) {
+    window.addEventListener("scroll", () => {
+      let scrolled = window.scrollY;
+      bgImage.style.transform = `translateY(${scrolled * 0.3}px)`;
+    });
+  }
+  });
+    </script>
 
     <section id="services" class="services-section">
       <!-- Services content remains unchanged -->
@@ -67,25 +81,49 @@
           <article class="services-section__box">
             <img src="assets/headphones.png" alt="General VA Icon" class="services-section__icon">
             <h3 class="services-section__box-title">General VA</h3>
-            <p class="services-section__box-description">Our general virtual assistants handle <b>Administrative Assistance, </b> <b>Call Handling, </b> <b>Data Entry, </b>and <b>Calendar Management.</b></p>
+            <p>We provide support in:</p>
+            <ul class="services-section__box-description">
+              <li><p>Administrative Assistance</p></li>
+              <li><p>Call Handling</p></li>
+              <li><p>Data Entry</p></li>
+              <li><p>Calendar Management</p></li>
+            </ul>
           </article>
-          
+        
           <article class="services-section__box">
             <img src="assets/notebook.png" alt="Executive VA Icon" class="services-section__icon">
             <h3 class="services-section__box-title">Executive VA</h3>
-            <p class="services-section__box-description">Executive VAs provide high-level support to <b> Administrative Assistance,</b> <b>Call Handling,</b> <b>Calendar Management,</b>and <b>Financial Management. </b></p>
+            <p>We provide support in:</p>
+            <ul class="services-section__box-description">
+              <li><p>Administrative Assistance</p></li>
+              <li><p>Call Handling</p></li>
+              <li><p>Calendar Management</p></li>
+              <li><p>Financial Management</p></li>
+            </ul>
           </article>
-          
+        
           <article class="services-section__box">
             <img src="assets/realstate.png" alt="Real Estate VA Icon" class="services-section__icon">
             <h3 class="services-section__box-title">Real Estate VA</h3>
-            <p class="services-section__box-description">Specialized in real estate operations, our VAs handle <b> Cold Calling,</b> <b>Data Entry,</b> <b>Calendar Management,</b> and <b>Appointment Setting.</b></p>
+            <p>We provide support in:</p>
+            <ul class="services-section__box-description">
+              <li><p>Cold Calling</p></li>
+              <li><p>Data Entry</p></li>
+              <li><p>Calendar Management</p></li>
+              <li><p>Appointment Setting</p></li>
+            </ul>
           </article>
-          
+        
           <article class="services-section__box">
             <img src="assets/medical.png" alt="Medical VA Icon" class="services-section__icon">
             <h3 class="services-section__box-title">Medical VA</h3>
-            <p class="services-section__box-description">Our medical virtual assistants manage <b>Patient Admission,</b> <b>Call Handling,</b> <b>Appointment Setting,</b> and <b>Cold Calling.</b></p>
+            <p>We provide support in:</p>
+            <ul class="services-section__box-description">
+              <li><p>Patient Admission</p></li>
+              <li><p>Call Handling</p></li>
+              <li><p>Appointment Setting</p></li>
+              <li><p>Cold Calling</p></li>
+            </ul>
           </article>
         </div>        
       </div>
@@ -117,6 +155,11 @@
       </div>
     </section>
   </main>
+
+  <section class="tagline-section">
+    <h2 class="tagline-text">"Empowering Your Success, One Task at a Time!"</h2>
+  </section>
+
   <footer>
     <div id="Contact" class="footer-container">
       <div class="footer-brand">

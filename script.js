@@ -1,7 +1,9 @@
 
+
 document.addEventListener('DOMContentLoaded', function() {
   const menuToggle = document.getElementById('menuToggle');
   const navMenu = document.getElementById('navMenu');
+
   
   if (menuToggle && navMenu) {
     menuToggle.addEventListener('click', function() {
@@ -44,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
 document.addEventListener('DOMContentLoaded', () => {
   /***********************************
    * Mobile Menu Toggle
@@ -84,18 +85,16 @@ navLinks.forEach(link => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const bgImage = document.querySelector(".hero-sectionbg-image");
 
-  /***********************************
-   * Parallax Effect for Hero Background
-   ***********************************/
-  const bgImage = document.querySelector('.hero-sectionbg-image');
   if (bgImage) {
-    window.addEventListener('scroll', () => {
-      const scrolled = window.scrollY;
+    window.addEventListener("scroll", () => {
+      let scrolled = window.scrollY;
       bgImage.style.transform = `translateY(${scrolled * 0.3}px)`;
     });
   }
+});
 
-  
   
 });

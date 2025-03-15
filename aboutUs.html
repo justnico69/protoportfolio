@@ -37,6 +37,7 @@
       </button>
       <!-- Navigation links; these match index.html -->
       <ul class="navbar__menu" id="navMenu">
+        <li class="navbar__item"><a href="#home" class="navbar__link">Home</a></li>
         <li class="navbar__item"><a href="index.html#services" class="navbar__link">Our Services</a></li>
         <li class="navbar__item"><a href="#mission" class="navbar__link">Our Mission</a></li>
         <li class="navbar__item"><a href="#vision" class="navbar__link">Our Vision</a></li>
@@ -57,13 +58,29 @@
     </div>
   </section>
 
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const bgImage = document.querySelector(".hero-sectionbg-image");
+
+  if (bgImage) {
+  window.addEventListener("scroll", () => {
+    let scrolled = window.scrollY;
+    bgImage.style.transform = `translateY(${scrolled * 0.3}px)`;
+  });
+}
+});
+  </script>
+
+
+
   <!-- OUR STORY SECTION (Content preserved) -->
   <section class="about-section" id="our-story">
     <div class="about-section__content">
       <div class="about-section__text">
         <h2 class="about-section__title">Our Story</h2>
         <p class="about-section__description">
-          Ace Virtual Hub was founded on the principles of innovation, reliability, and excellence. We create this small team dedicated to provide virtual assistance that enables businesses to focus on what they need best and to provide jobs for people who are experts in this field.
+          Ace Virtual Hub was founded on the principles of innovation, reliability, and excellence. We create this small team dedicated to provide virtual assistance that enables businesses to focus on what they need best and to offer job opportunities for people who are experts in these fields.
         </p>
       </div>
       <div class="about-section__image">
@@ -71,6 +88,40 @@
       </div>
     </div>
   </section>
+
+<!-- MISSION & VISION SECTION -->
+<section class="mission-vision-section">
+  <div class="mission-vision__container">
+    
+    <!-- Mission -->
+    <div class="mission-section">
+      <div class="mission-section__icon">
+        <i class="fas fa-bullseye"></i>
+      </div>
+      <h2 class="mission-section__title">Our Mission</h2>
+      <p class="mission-section__description">
+        Our mission is to empower businesses and entrepreneurs by providing high-quality, reliable, and cost-effective virtual assistance. We streamline operations, improve productivity, and offer specialized support tailored to each client’s needs, enabling them to focus on growth and success.
+      </p>
+    </div>
+
+    <!-- Line Divider -->
+    <div class="mission-vision__divider"></div>
+
+    <!-- Vision -->
+    <div class="vision-section">
+      <div class="vision-section__icon">
+        <i class="fas fa-eye"></i>
+      </div>
+      <h2 class="vision-section__title">Our Vision</h2>
+      <p class="vision-section__description">
+        Our vision is to become a leading provider of innovative virtual assistance, transforming the way businesses operate. We strive to be a trusted partner, helping clients scale effortlessly, improve work-life balance, and focus on their core strengths.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
 
   <!-- OUR TEAM SECTION (Content preserved) -->
   <section class="ourteam">
@@ -131,37 +182,9 @@
   </div>
 </section>
 
-
-
-  <!-- MISSION SECTION (Content preserved) -->
-  <section id="mission" class="mission-section">
-    <div class="mission-section__content">
-      <div class="mission-section__text">
-        <h2 class="mission-section__title">Our Mission</h2>
-        <p class="mission-section__description">
-          Our mission is to empower businesses and entrepreneurs by providing high-quality, reliable, and cost-effective virtual assistance. We are dedicated to streamlining operations, improving productivity, and offering specialized support tailored to meet the unique needs of each client. Through innovation, trust, and excellence, we help our clients succeed by managing their administrative and operational tasks, allowing them to focus on growth and success.
-        </p>
-      </div>
-      <div class="mission-section__image">
-        <img src="assets/mission.jpeg" alt="Our Mission" class="mission-section__team-image" loading="lazy">
-      </div>
-    </div>
-  </section>
-
-  <!-- VISION SECTION (Content preserved) -->
-  <section id="vision" class="vision-section">
-    <div class="vision-section__content">
-      <div class="vision-section__text">
-        <h2 class="vision-section__title">Our Vision</h2>
-        <p class="vision-section__description">
-          Our vision is to become a leading provider of innovative and personalized virtual assistance, transforming the way businesses operate. We strive to be a trusted partner to entrepreneurs and organizations by delivering exceptional service that drives growth, efficiency, and success. We envision a future where our support helps clients scale effortlessly, improve work-life balance, and focus on their core strengths, all while fostering a culture of continuous improvement and excellence.
-        </p>
-      </div>
-      <div class="vision-section__image">
-        <img src="assets/vision.jpg" alt="Our Vision" class="vision-section__team-image" loading="lazy">
-      </div>
-    </div>
-  </section>
+<section class="tagline-section">
+  <h2 class="tagline-text">"Empowering Your Success, One Task at a Time!"</h2>
+</section>
 
   <!-- FOOTER SECTION -->
   <!-- The footer now uses the same black-and-gold styling and gradient text as index.html -->

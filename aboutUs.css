@@ -20,16 +20,16 @@
 .navbar__logo {
   display: flex;
   align-items: center;
-  gap: 10px; /* Adjust spacing between images */
+  gap: 10px; 
 }
 
 .navbar__logo-image {
-  height: 50px; /* Adjust as needed */
+  height: 50px; 
   width: auto;
 }
 
 .navbar__logo-text {
-  height: 100px; /* Adjust as needed */
+  height: 100px; 
   width: auto;
 }
 
@@ -283,12 +283,207 @@ section {
   border-color: #ba8d1e;
   color: #161002;
 }
+
+
+/* --------------------------------------------------
+   About Us (Our Story & Team) Section (Content preserved)
+----------------------------------------------------- */
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 5%;
+  background-color: #ffffff;
+  box-shadow: 0px -10px 20px rgba(0,0,0,0.1), 0px 10px 20px rgba(0,0,0,0.1);
+}
+.about-section__content {
+  display: flex;
+  max-width: 1200px;
+  align-items: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+.about-section__text {
+  flex: 1;
+}
+.about-section__title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  background: -webkit-linear-gradient(#f9f295, #E0AA3E, #B88A44);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  position: relative;
+}
+.about-section__title::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background: var(--primary-dark);
+  bottom: -15px;
+  left: 0;
+}
+.about-section__description {
+  font-size: 1.2rem;
+  color: var(--text-gray);
+  line-height: 1.8;
+  margin-top: 30px;
+}
+.about-section__image {
+  flex: 1;
+}
+.about-section__team-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+.about-section__team-image:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* --------------------------------------------------
+   Mission & Vision Section
+----------------------------------------------------- */
+
+.mission-vision-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 10%;
+  background-color: var(--primary-light);
+  text-align: center; 
+}
+
+.mission-vision__container {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  width: 100%;
+  max-width: 1200px;
+  gap: 10%; 
+  margin-bottom: 6%;
+  margin-top: 6%;
+}
+
+.mission-section,
+.vision-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
+}
+
+/* Icon Styling */
+.mission-section__icon,
+.vision-section__icon {
+  font-size: 4rem;
+  background: -webkit-linear-gradient(#ee8829, #ffce6d, #ff9900);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Title Styling */
+.mission-section__title,
+.vision-section__title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  background: -webkit-linear-gradient(#f9f295, #E0AA3E, #B88A44);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  margin-top: -2%;
+}
+
+.mission-section__title::after,
+.vision-section__title::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background: var(--primary-color);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Description Styling */
+.mission-section__description,
+.vision-section__description {
+  font-size: 1.2rem;
+  color: var(--text-gray);
+  line-height: 1.8;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+/* Image Styling */
+.mission-section__image,
+.vision-section__image {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.mission-section__team-image,
+.vision-section__team-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-section__team-image:hover,
+.vision-section__team-image:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* 🚀 Fixed Vertical Divider */
+.mission-vision__divider {
+  width: 2px;
+  height: 45%;
+  background-color: var(--primary-color);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mission-vision__container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .mission-vision__divider {
+    width: 80%;
+    height: 2px;
+    background-color: #333;
+    margin: 30px 0;
+    position: relative;
+    left: 0;
+    transform: none;
+  }
+}
+
+
 /* --------------------------------------------------
    Our Team Section
 ----------------------------------------------------- */
 .ourteam {
   position: relative;
   text-align: center;
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
 
 .ourteam_header {
@@ -339,18 +534,17 @@ section {
   text-align: center;
   position: relative;
   overflow: hidden;
-  margin-bottom: 5%;
 }
 
 .ourteamcard:hover {
   transform: translateY(-10px);
 }
 
-.outeramcard:hover::before {
+.ourteramcard:hover::before {
   transform: scaleX(1);
 }
 
-.outeramcard::before {
+.ourteramcard::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -373,134 +567,22 @@ section {
 .ourteamcard h3 {
   margin: 15px 0 5px;
   font-size: 18px;
+  color: #dd9b00;
 }
 .ourteamcard p {
-  color: gray;
+  color: #444443;
   font-size: 14px;
   margin-bottom: 10px;
+  font-weight: 400;
 }
 .ourteamcard .role {
+  color: var(--primary-color);
   font-weight: bold;
   margin-bottom: 10px;
+  font-weight: 600;
 }
 
 
-/* --------------------------------------------------
-   Mission Section (Content preserved)
------------------------------------------------------ */
-.mission-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 120px 5%;
-  background-color: var(--primary-light);
-  box-shadow: 0px 10px 20px rgba(0,0,0,0.1)!important;
-}
-.mission-section__content {
-  display: flex;
-  max-width: 1200px;
-  align-items: center;
-  gap: 80px;
-  flex-wrap: wrap;
-}
-.mission-section__text {
-  flex: 1;
-  text-align: justify;
-  padding-right: 5%;
-}
-/* Gradient text styling for mission heading (matches index.html) */
-.mission-section__title,
-.vision-section__title {
-  font-size: 2.1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  position: relative;
-  background: -webkit-linear-gradient(#f9f295, #E0AA3E, #B88A44);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.mission-section__title {
-  color: var(--primary-dark);
-}
-.vision-section__title {
-  color: var(--primary-dark);
-}
-.mission-section__title::after,
-.vision-section__title::after {
-  content: '';
-  position: absolute;
-  width: 60px;
-  height: 3px;
-  background: var(--primary-dark);
-  bottom: -15px;
-  left: 0;
-}
-.mission-section__description,
-.vision-section__description {
-  font-size: 1.3rem;
-  color: var(--text-gray);
-  line-height: 1.8;
-  margin-top: 30px;
-}
-.mission-section__image,
-.vision-section__image {
-  flex: 1;
-}
-.mission-section__team-image,
-.vision-section__team-image {
-  width: 100%;
-  max-width: 500px;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  transition: var(--transition);
-}
-.mission-section__team-image:hover,
-.vision-section__team-image:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-}
-.mission-section:hover {
-  box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
-  z-index: 2;
-}
-
-/* --------------------------------------------------
-   Vision Section (Content preserved)
------------------------------------------------------ */
-.vision-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 120px 5%;
-  background-color: #ffffff;
-}
-.vision-section__content {
-  display: flex;
-  max-width: 1200px;
-  align-items: center;
-  gap: 80px;
-  flex-direction: row; /* Text on left, image on right */
-}
-.vision-section__text {
-  flex: 1;
-  text-align: justify;
-  padding-right: 5%;
-}
-.vision-section__image {
-  flex: 1;
-}
-.vision-section__team-image {
-  width: 100%;
-  max-width: 500px;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  transition: var(--transition);
-}
-.vision-section__team-image:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-}
 
 /* --------------------------------------------------
    Video Testimonial Section
@@ -508,8 +590,8 @@ section {
 .testimonial-section {
   padding: 80px 5%;
   text-align: center;
-  background-color: #f8f9fa;
-  box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.05);
+  background-color: var(--primary-light);
+  margin-top: 3%;
 }
 
 .testimonial-section h2 {
@@ -517,7 +599,16 @@ section {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 32px;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
+}
+
+.testimonial-section h2::after {
+  content: '';
+  display: block;
+  width: 80px; 
+  height: 3px; 
+  background: var(--primary-color); 
+  margin: 10px auto 0; 
 }
 
 .testimonial-section p {
@@ -531,14 +622,15 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px; /* Adds space between the image and video */
+  gap: 30px; 
   width: 100%;
+  margin-bottom: 40px;
 }
 
 /* Image Styling */
 .image-container {
-  flex: 1; /* Allows it to take available space */
-  max-width: 30%; /* Adjust width for proper spacing */
+  flex: 1;
+  max-width: 30%;
   text-align: center;
 }
 
@@ -583,6 +675,32 @@ section {
     max-width: 90%; /* Ensures they stack properly */
   }
 }
+
+.tagline-section {
+  text-align: center;
+  padding: 60px 5%;
+  background-color: var(--primary-dark);
+}
+
+.tagline-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.tagline-text::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #E0AA3E; /* Accent color */
+  margin: 10px auto 0;
+}
+
 
 /* --------------------------------------------------
    Footer Section 

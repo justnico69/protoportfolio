@@ -197,29 +197,28 @@ section {
 .hero-section {
   position: relative;
   width: 100%;
-  height: 100vh; 
+  height: 100vh;
+  overflow: hidden;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  color: white;
 }
 
 .hero-sectionbg-image {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  width: 110%;
+  width: 100%;
   height: 100%;
   background: url('assets/Coverpage.png') no-repeat center center/cover;
-  z-index: -1;
+  z-index: -2;
+  transform: translateY(0);
+  transition: transform 0.1s linear;
 }
 
 .hero-sectionoverlay {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   background: rgba(48, 35, 1, 0.27); /* Last value (0.3) sets opacity */
@@ -313,7 +312,9 @@ section {
   z-index: 2;
 }
 .services-section__header {
-  color: var(--primary-color);
+  background: -webkit-linear-gradient(#f9f295, #E0AA3E, #B88A44);         
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 700;
   font-size: 1.25rem;
   text-align: center;
@@ -358,7 +359,7 @@ section {
 }
 
 .services-section__box {
-  width: 280px;
+  width: 295px;
   padding: 35px 25px;
   background: var(--primary-light);
   box-shadow: var(--box-shadow);
@@ -387,19 +388,25 @@ section {
   transform: scaleX(1);
 }
 
-
 .services-section__box-title {
-  font-size: 1.3rem;
-  color: var(--primary-dark);
+  font-size: 1.5rem;
+  color: #dd9b00;
   margin-bottom: 15px;
   font-weight: 1000;
 }
 
+
 .services-section__box-description {
-  color: var(--text-gray);
-  line-height: 1.6;
-  font-size: 0.95rem;
-  text-align: center;
+  text-align: left;
+  list-style-type: disc; 
+  padding-left: 55px;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.services-section__box p{
+  margin-bottom: 10px;
 }
 
 .services-section__box:hover {
@@ -416,6 +423,7 @@ section {
   background-color: var(--primary-light);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1)!important; 
 }
+
 
 /* Vision Section */
 .vision-section {
@@ -494,7 +502,7 @@ section {
 
 .mission-section__description,
 .vision-section__description {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: var(--text-gray);
   line-height: 1.8;
   margin-top: 30px;
@@ -527,77 +535,36 @@ section {
 }
 
 
-/* About Us Section */
-.about-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 100px 5%;
-  background-color: #ffffff;
-  box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.1), 0px 10px 20px rgba(0, 0, 0, 0.1);
+
+.tagline-section {
+  text-align: center;
+  padding: 60px 5%;
+  background-color: var(--primary-dark);
 }
 
-.about-section__content {
-  display: flex;
-  max-width: 1200px;
-  align-items: center;
-  gap: 60px;
-}
-
-.about-section__text {
-  flex: 1;
-}
-
-.about-section__title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: var(--primary-dark);
+.tagline-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  letter-spacing: 1.5px;
   position: relative;
+  display: inline-block;
 }
 
-.about-section__title::after {
+.tagline-text::after {
   content: '';
-  position: absolute;
-  width: 50px;
-  height: 3px;
-  background: var(--primary-color);
-  bottom: -10px;
-  left: 0;
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #E0AA3E; /* Accent color */
+  margin: 10px auto 0;
 }
-
-.about-section__description {
-  font-size: 1.1rem;
-  color: var(--text-gray);
-  line-height: 1.8;
-  margin-top: 30px;
-}
-
-.about-section__image {
-  flex: 1;
-}
-
-.about-section__team-image {
-  width: 100%;
-  max-width: 500px;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  transition: var(--transition);
-}
-
-.about-section__team-image:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-}
-
 
 /* ============================== */
-/* UPDATED: Footer Section        */
+/* Footer Section        */
 /* ============================== */
-/* --------------------------------------------------
-   Footer Section (UPDATED to match the reference image)
------------------------------------------------------ */
+
 .footer {
   background: var(--primary-dark);
   padding: 20px 0;
