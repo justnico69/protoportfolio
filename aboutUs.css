@@ -234,7 +234,6 @@ section {
   animation: fadeIn 1.5s ease-in-out;
   margin-bottom: 15px;
   font-weight: 700;
-  /* Gradient text styling (copied from index.html) */
   background: linear-gradient(to right, #9c7e37, #faf17a, #D2AC47, #f1bd11);
   background-clip: text;
   -webkit-background-clip: text;
@@ -510,7 +509,6 @@ section {
   left: 50%;
   transform: translateX(-50%);
 }
-
 
 .ourteam p {
   color: var(--primary-dark);

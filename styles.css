@@ -193,7 +193,9 @@ section {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Hero Section */
+/* --------------------------------------------------
+   Hero Section
+----------------------------------------------------- */
 .hero-section {
   position: relative;
   width: 100%;
@@ -221,7 +223,7 @@ section {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(48, 35, 1, 0.27); /* Last value (0.3) sets opacity */
+  background: rgba(48, 35, 1, 0.27);
   z-index: -1;
 }
 
@@ -301,7 +303,9 @@ section {
   color: #161002;
 }
 
-/* Services Section */
+/* --------------------------------------------------
+   Services Section
+----------------------------------------------------- */
 .services-section {
   background-color: #ffffff;
   padding-top: 8%;
@@ -400,7 +404,7 @@ section {
   text-align: left;
   list-style-type: disc; 
   padding-left: 55px;
-  color: var(--primary-color);
+  color: #666;
   font-weight: 600;
   font-size: 1.05rem;
 }
@@ -413,6 +417,10 @@ section {
   transform: translateY(-10px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
+
+/* --------------------------------------------------
+   Mission and Vision section
+----------------------------------------------------- */
 
 /* Mission Section */
 .mission-section {
@@ -486,7 +494,7 @@ section {
   position: absolute;
   width: 50px;
   height: 3px;
-  background: #453917;
+  background: var(--primary-color);
   bottom: -10px;
   left: 0;
 }
@@ -495,7 +503,7 @@ section {
   position: absolute;
   width: 50px;
   height: 3px;
-  background: #453917;
+  background: var(--primary-color);
   bottom: -10px;
   left: 0;
 }
@@ -534,7 +542,9 @@ section {
   z-index: 2;
 }
 
-
+/* --------------------------------------------------
+   Tagline section
+----------------------------------------------------- */
 
 .tagline-section {
   text-align: center;
@@ -557,13 +567,13 @@ section {
   display: block;
   width: 100px;
   height: 4px;
-  background: #E0AA3E; /* Accent color */
+  background: #E0AA3E;
   margin: 10px auto 0;
 }
 
-/* ============================== */
-/* Footer Section        */
-/* ============================== */
+/* --------------------------------------------------
+  Footer section
+----------------------------------------------------- */
 
 .footer {
   background: var(--primary-dark);
