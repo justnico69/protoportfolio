@@ -85,16 +85,5 @@ navLinks.forEach(link => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const bgImage = document.querySelector(".hero-sectionbg-image");
-
-  if (bgImage) {
-    window.addEventListener("scroll", () => {
-      let scrolled = window.scrollY;
-      bgImage.style.transform = `translateY(${scrolled * 0.3}px)`;
-    });
-  }
-});
-
   
 });
